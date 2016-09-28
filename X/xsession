@@ -1,3 +1,5 @@
+#!/bin/bash
+
 source /etc/X11/xinit/xinputrc
 
 eval $(gpg-agent --daemon --default-cache-ttl 1200 --write-env-file $HOME/.gpg-agent-info)
@@ -5,10 +7,10 @@ eval $(dbus-launch --sh-syntax)
 
 export SSH_AUTH_SOCK
 export GPG_AGENT_INFO
-export LANG="en_US.UTF-8"
-export LC_ALL="en_US.UTF-8"
 export TERMINAL='lxterminal'
 
-# Launch i3 window manager
+xmodmap ~/.Xmodmap
+
+lxterminal &
 exec i3
 
