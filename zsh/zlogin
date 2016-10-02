@@ -1,0 +1,4 @@
+
+ssh-add -l
+exit_status=$?
+if [[ $exit_status -ne 0 ]]; then ssh-add; fi
