@@ -9,8 +9,24 @@ export SSH_AUTH_SOCK
 export GPG_AGENT_INFO
 export TERMINAL='lxterminal'
 
-xmodmap ~/.Xmodmap
+setxkbmap -layout dvorak
+setxkbmap -option ctrl:nocaps
 
+kbid=$(xinput -list | grep -i 'NexDock Keyboard' | grep -o 'id=[0-9]' | grep -o '[0-9]')
+if [[ "$kbid" ]]
+then
+    setxkbmap -device $kbid -option altwin:swap_alt_win,ctrl:nocaps
+fi
+
+kbid=$(xinput -list | grep -i 'HHKB' | grep -o 'id=[0-9]' | grep -o '[0-9]')
+if [[ "$kbid" ]]
+then
+    setxkbmap -device $kbid -option
+    setxkbmap -device $kbid -option ctrl:nocaps
+fi
+
+# setxkbmap -option altwin:swap_alt_win,ctrl:nocaps
+
+emacs &
 lxterminal &
 exec i3
-
