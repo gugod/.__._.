@@ -1,3 +1,4 @@
+export EDITOR="emacs -nw -q"
 
 ssh-add -l
 exit_status=$?
