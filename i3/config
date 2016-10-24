@@ -146,6 +146,9 @@ bar {
 
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 -- +5%
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -- -5%
+bindsym XF86MonBrightnessUp   exec --no-startup-id xbacklight -inc 5
+bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 5
+
 
 assign [class="^Emacs$"] 1
 assign [class="^Lxterminal"] 2
@@ -154,6 +157,7 @@ assign [class="^Firefox$"] 3
 assign [class="^Navigator"] 3
 assign [class="^Icedove"] 4
 assign [class="^Sylpheed"] 4
+assign [class="^Pidgin"] 4
 
 # workspace 1 output HDMI1
 # workspace 2 output HDMI1
@@ -161,6 +165,5 @@ assign [class="^Sylpheed"] 4
 
 # exec --no-startup-id xrandr --output HDMI1 --auto --above LVDS1
 # exec --no-startup-id emacs
-# exec --no-startup-id lxterminal
+exec --no-startup-id lxterminal
 # exec --no-startup-id iceweasel
-
