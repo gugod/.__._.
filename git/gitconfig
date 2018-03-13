@@ -1,0 +1,7 @@
+# non-trivial aliases
+[alias]
+        cmmm = commit -m '' --allow-empty-message
+        pupu = !git pull --no-ff && git push
+        l = ! git log --color --graph --format='%h [%aN] %s' --decorate --first-parent $(git merge-base HEAD master)^..HEAD
+        oldest-ancestor = !zsh -c 'diff -u <(git rev-list --first-parent "${1:-master}") <(git rev-list --first-parent "${2:-HEAD}") | sed -ne \"s/^ //p\" | head -1' -
+        detach = ! git checkout $(git rev-parse HEAD)
