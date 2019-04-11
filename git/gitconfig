@@ -1,5 +1,12 @@
 # non-trivial aliases
 [alias]
+        m = merge --strategy-option=patience --no-ff --no-edit
+        d = diff -W
+        ds = diff -W --staged
+        pusho = ! git push -u origin $(git current-branch)
+        current-branch = symbolic-ref --short HEAD
+        amend = commit --amend --no-edit
+        mylog = !git log --author $(git config user.email)
         cmmm = commit -m '' --allow-empty-message
         pupu = !git pull --no-ff && git push
         l = ! git log --color --graph --format='%h [%aN] %s' --decorate --first-parent $(git merge-base HEAD master)^..HEAD
