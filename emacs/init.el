@@ -1,4 +1,10 @@
 
+(use-package rg
+  :bind ("C-#" . rg-dwim))
+
+(use-package ws-butler
+  :init (ws-butler-global-mode t))
+
 (use-package ace-jump-mode
   :bind ("C-c SPC" . ace-jump-mode))
 
