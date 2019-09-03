@@ -22,3 +22,13 @@
 
 (global-set-key (kbd "s-{") 'previous-buffer)
 (global-set-key (kbd "s-}") 'next-buffer)
+
+(defun on-after-init ()
+  (unless (display-graphic-p (selected-frame))
+    (progn
+      (setq-default left-margin-width 2 right-margin-width 2)
+      (set-window-buffer nil (current-buffer))
+      (set-face-foreground 'default "unspecified-fg" (selected-frame))
+      (set-face-background 'default "unspecified-bg" (selected-frame)))))
+
+(add-hook 'window-setup-hook 'on-after-init)
