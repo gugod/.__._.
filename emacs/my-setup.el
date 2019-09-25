@@ -36,3 +36,9 @@
       (set-face-background 'default "unspecified-bg" (selected-frame)))))
 
 (add-hook 'window-setup-hook 'on-after-init)
+
+(defun upcase-prev-word ()
+    (interactive)
+    (upcase-word -1))
+
+(global-set-key (kbd "M-U") 'upcase-prev-word)
