@@ -1,3 +1,6 @@
+(setq left-margin-width 1
+      right-margin-with 1)
+
 (use-package rg
   :bind ("C-#" . rg-dwim))
 
@@ -38,3 +41,4 @@
         )))
 
 (global-set-key (kbd "M-z") 'zap-up-to-char)
+(global-unset-key (kbd "C-z"))
