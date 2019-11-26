@@ -23,11 +23,11 @@
 (global-set-key (kbd "s-{") 'previous-buffer)
 (global-set-key (kbd "s-}") 'next-buffer)
 
-(setq initial-frame-alist
+(setq default-frame-alist
       '((ns-appearance . "dark")
-        (ns-transparent-titlebar . t))
-      left-margin-width 2
-      right-margin-width 2)
+        (ns-transparent-titlebar . t)
+        (left-margin-width . 2)
+        (right-margin-width . 2)))
 
 (defun on-after-init ()
   (unless (display-graphic-p (selected-frame))
