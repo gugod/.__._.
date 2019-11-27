@@ -45,4 +45,10 @@
 
 (setq browse-url-browser-function 'browse-url-default-macosx-browser)
 
+(defun upcase-prev-word ()
+    (interactive)
+    (upcase-word -1))
+
+(global-set-key (kbd "M-U") 'upcase-prev-word)
+
 (provide 'my-setup)
