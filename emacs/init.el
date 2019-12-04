@@ -1,3 +1,16 @@
+(set-language-environment 'UTF-8)
+(prefer-coding-system 'utf-8)
+(if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
+(if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
+(if (fboundp 'set-file-name-coding-system)
+    (set-file-name-coding-system 'utf-8))
+
+(setq backup-directory-alist `((".*" . ,temporary-file-directory))
+      auto-save-file-name-transforms `((".*" ,temporary-file-directory t))
+      cursor-type 'box
+      initial-scratch-message ""
+      inhibit-startup-message t
+      require-final-newline t)
 
 (use-package rg
   :bind ("C-#" . rg-dwim))
@@ -31,5 +44,7 @@
 (let ((d (concat (getenv "HOME") "/.emacs.d/extra")))
   (if (file-exists-p d)
       (progn
-        (mapc 'load-file (directory-files d t ".el$" t))
-        )))
+        (mapc 'load-file (directory-files d t ".el$" t)))))
+
+(global-set-key (kbd "M-z") 'zap-up-to-char)
+(global-unset-key (kbd "C-z"))

@@ -37,8 +37,18 @@
 
 (add-hook 'window-setup-hook 'on-after-init)
 
+;; (setq version-control t)
+;; (setq kept-new-versions 3)
+;; (setq delete-old-versions t)
+;; (setq kept-old-versions 2)
+;; (setq dired-kept-versions 1)
+
+(setq browse-url-browser-function 'browse-url-default-macosx-browser)
+
 (defun upcase-prev-word ()
     (interactive)
     (upcase-word -1))
 
 (global-set-key (kbd "M-U") 'upcase-prev-word)
+
+(provide 'my-setup)
