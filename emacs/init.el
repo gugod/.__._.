@@ -38,6 +38,7 @@
   :bind (("C-S-c C-S-c" . mc/edit-lines)
          ("C-S-c C-a" .   mc/edit-beginning-of-lines)
          ("C-S-c C-e" .   mc/edit-ends-of-lines)
+         ("C-S-c M-\"" .  mc/mark-all-like-this)
          ))
 
 (use-package    feebleline
