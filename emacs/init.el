@@ -58,4 +58,3 @@
         (mapc 'load-file (directory-files d t ".el$" t)))))
 
 (global-set-key (kbd "M-z") 'zap-up-to-char)
-(global-unset-key (kbd "C-z"))
