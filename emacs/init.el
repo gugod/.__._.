@@ -5,6 +5,13 @@
 (if (fboundp 'set-file-name-coding-system)
     (set-file-name-coding-system 'utf-8))
 
+(if (fboundp 'window-system)
+    (if (window-system)
+	(progn
+          (global-unset-key (kbd "C-z")))
+      (progn
+	(if (fboundp 'menu-bar-mode) (menu-bar-mode -1)))))
+
 (setq backup-directory-alist `((".*" . ,temporary-file-directory))
       auto-save-file-name-transforms `((".*" ,temporary-file-directory t))
       cursor-type 'box
