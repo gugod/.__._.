@@ -77,8 +77,6 @@
       show-paren-style 'parentheses
       frame-title-format "%b"
       initial-frame-alist '((ns-appearance . "dark") (ns-transparent-titlebar . t))
-      left-margin-width 2
-      right-margin-width 2
       browse-url-browser-function 'browse-url-default-macosx-browser
       ;; version-control t
       ;; kept-new-versions 3
