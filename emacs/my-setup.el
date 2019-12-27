@@ -60,6 +60,14 @@
 
 (global-set-key (kbd "M-z") 'zap-up-to-char)
 
+(setq-default mode-line-format nil)
+(setq-default indent-tabs-mode nil)
+
+(setq default-tab-width 8)
+(setq mouse-yank-at-point t)
+(setq inhibit-startup-message t)
+(setq visible-bell t)
+
 (setq scroll-margin 3
       default-tab-width 8
       scroll-conservatively 10000
@@ -85,6 +93,9 @@
               font-lock-maximum-decoration t)
 
 (show-paren-mode t)
+
+(setq frame-title-format "%b")
+
 (auto-image-file-mode)
 
 (put 'set-goal-column 'disabled nil)
@@ -105,6 +116,12 @@
       (set-face-background 'default "unspecified-bg" (selected-frame)))))
 
 (add-hook 'window-setup-hook 'on-after-init)
+
+(setq default-frame-alist
+      '((ns-appearance . "dark")
+        (ns-transparent-titlebar . t)
+        (left-margin-width . 2)
+        (right-margin-width . 2)))
 
 (defun upcase-prev-word ()
     (interactive)

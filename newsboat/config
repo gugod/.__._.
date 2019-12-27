@@ -1,1 +1,3 @@
 browser "open %u"
+bookmark-cmd "~/bin/newsboat-bookmark.sh"
+bookmark-autopilot yes
