@@ -1,9 +1,6 @@
-http://ebook.taaze.tw/do/rssfeed/item1_1.xml
-http://feeds.feedburner.com/JustVocabulary
+http://g0v-data.gugod.org/people-in-news/articles-subjectively-perfect.atom
 http://g0v-data.gugod.org/people-in-news/articles-good.atom
 http://g0v-data.gugod.org/people-in-news/articles-ng.atom
-http://g0v-data.gugod.org/people-in-news/articles-noauthor.atom
-http://g0v-data.gugod.org/people-in-news/articles-subjectively-perfect.atom
 http://jedi.org/blog/atom.xml
 http://www.nntp.perl.org/rss/perl.jobs.rdf
 https://anchor.fm/s/12985618/podcast/rss
@@ -27,3 +24,5 @@ https://metacpan.org/feed/recent?f=
 https://pdis.nat.gov.tw/zh-TW/feed.xml
 https://rt.perl.org/NoAuth/rss/gugod%40gugod.org/3cf77c9ce62f160a/?Order=ASC&OrderBy=id&Query=Queue+%3D+%27perl5%27+AND+(Status+%3D+%27new%27+OR+Status+%3D+%27open%27+OR+Status+%3D+%27stalled%27)
 https://stackoverflow.com/feeds/tag?tagnames=perl&amp;amp;sort=newest
+http://ebook.taaze.tw/do/rssfeed/item1_1.xml
+http://feeds.feedburner.com/JustVocabulary
