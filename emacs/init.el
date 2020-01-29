@@ -33,14 +33,6 @@
          ("C-S-c C-e" .   mc/edit-ends-of-lines)
          ))
 
-(use-package    feebleline
-  :ensure       t
-  :config       (setq feebleline-msg-functions
-                      '((feebleline-line-number         :post "" :fmt "%5s")
-                        (feebleline-column-number       :pre ":" :fmt "%-2s")
-                        (feebleline-project-name        :align right)))
-                (feebleline-mode 1))
-
 (let ((d (concat (getenv "HOME") "/.emacs.d/extra")))
   (if (file-exists-p d)
       (progn

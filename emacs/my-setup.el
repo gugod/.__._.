@@ -41,18 +41,6 @@
          ("C-S-c M-\"" .  mc/mark-all-like-this)
          ))
 
-(use-package    feebleline
-  :ensure       t
-  :config       (setq feebleline-msg-functions
-                      '((feebleline-line-number         :post "" :fmt "%5s")
-                        (feebleline-column-number       :pre ":" :fmt "%-2s")
-                        (feebleline-file-directory      :face feebleline-dir-face :post "")
-                        (feebleline-file-or-buffer-name :face font-lock-keyword-face :post "")
-                        (feebleline-file-modified-star  :face font-lock-warning-face :post "")
-                        (feebleline-git-branch          :face feebleline-git-face :pre " : ")
-                        (feebleline-project-name        :align right)))
-                (feebleline-mode 1))
-
 (let ((d (concat (getenv "HOME") "/.emacs.d/extra")))
   (if (file-exists-p d)
       (progn
