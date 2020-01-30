@@ -5,13 +5,6 @@
 (if (fboundp 'set-file-name-coding-system)
     (set-file-name-coding-system 'utf-8))
 
-(if (fboundp 'window-system)
-    (if (window-system)
-	(progn
-          (global-unset-key (kbd "C-z")))
-      (progn
-	(if (fboundp 'menu-bar-mode) (menu-bar-mode -1)))))
-
 (setq backup-directory-alist `((".*" . ,temporary-file-directory))
       auto-save-file-name-transforms `((".*" ,temporary-file-directory t))
       cursor-type 'box
@@ -48,40 +41,23 @@
 
 (global-set-key (kbd "M-z") 'zap-up-to-char)
 
-(setq-default mode-line-format nil)
-(setq-default indent-tabs-mode nil)
-
-(setq default-tab-width 8)
-(setq mouse-yank-at-point t)
-(setq inhibit-startup-message t)
-(setq visible-bell t)
-
-(setq scroll-margin 3
-      default-tab-width 8
-      scroll-conservatively 10000
-      visible-bell t
-      inhibit-startup-message t
-      mouse-yank-at-point t
-      show-paren-style 'parentheses
-      frame-title-format "%b"
-      initial-frame-alist '((ns-appearance . "dark") (ns-transparent-titlebar . t))
-      browse-url-browser-function 'browse-url-default-macosx-browser
-      ;; version-control t
-      ;; kept-new-versions 3
-      ;; delete-old-versions t
-      ;; kept-old-versions 2
-      ;; dired-kept-versions 1
-      mac-option-modifier 'meta
-      mac-command-modifier 'hyper
-      )
-
 (setq-default indent-tabs-mode nil
+              ;;; mode-line-format nil
+              scroll-margin 3
+              default-tab-width 8
+              scroll-conservatively 10000
+              inhibit-startup-message t
+              mouse-yank-at-point t
+              show-paren-style 'parentheses
+              frame-title-format "%b"
+              initial-frame-alist '((ns-appearance . "dark") (ns-transparent-titlebar . t))
+              browse-url-browser-function 'browse-url-default-macosx-browser
+              mac-option-modifier 'meta
+              mac-command-modifier 'hyper
               font-lock-maximum-decoration t)
 
 (show-paren-mode t)
-
 (setq frame-title-format "%b")
-
 (auto-image-file-mode)
 
 (put 'set-goal-column 'disabled nil)
@@ -99,15 +75,15 @@
   (unless (display-graphic-p (selected-frame))
     (progn
       (set-face-foreground 'default "unspecified-fg" (selected-frame))
-      (set-face-background 'default "unspecified-bg" (selected-frame)))))
-
+      (set-face-background 'default "unspecified-bg" (selected-frame))
+      (if (fboundp 'window-system)
+          (if (window-system)
+              (progn
+                (global-unset-key (kbd "C-z")))
+            (progn
+              (if (fboundp 'menu-bar-mode) (menu-bar-mode -1)))))
+      )))
 (add-hook 'window-setup-hook 'on-after-init)
-
-(setq default-frame-alist
-      '((ns-appearance . "dark")
-        (ns-transparent-titlebar . t)
-        (left-margin-width . 2)
-        (right-margin-width . 2)))
 
 (defun upcase-prev-word ()
     (interactive)
