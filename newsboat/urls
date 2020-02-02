@@ -1,7 +1,11 @@
-http://g0v-data.gugod.org/people-in-news/articles-nokeywords.atom
-http://g0v-data.gugod.org/people-in-news/articles-subjectively-perfect.atom
+# query feeds
+"query:Unread Articles (Recent):unread = \"yes\" and age between 0:31"
+"query:Unread Articles (1 month old):unread = \"yes\" and age between 32:3650"
+
 http://g0v-data.gugod.org/people-in-news/articles.atom
+http://g0v-data.gugod.org/people-in-news/articles-nokeywords.atom
 http://g0v-data.gugod.org/people-in-news/articles-ng.atom
+http://g0v-data.gugod.org/people-in-news/articles-haibulai.atom
 http://jedi.org/blog/atom.xml
 http://www.nntp.perl.org/rss/perl.jobs.rdf
 https://anchor.fm/s/12985618/podcast/rss
