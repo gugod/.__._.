@@ -1,3 +1,5 @@
+(defconst IS-MAC     (eq system-type 'darwin))
+
 (set-language-environment 'UTF-8)
 (prefer-coding-system 'utf-8)
 (if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
@@ -10,7 +12,8 @@
       cursor-type 'box
       initial-scratch-message ""
       inhibit-startup-message t
-      require-final-newline t)
+      require-final-newline t
+      delete-by-moving-to-trash IS-MAC)
 
 (use-package rg
   :bind ("C-#" . rg-dwim))
@@ -33,6 +36,11 @@
          ("C-S-c C-e" .   mc/edit-ends-of-lines)
          ("C-S-c M-\"" .  mc/mark-all-like-this)
          ))
+
+(use-package editorconfig
+  :ensure t
+  :config
+  (editorconfig-mode 1))
 
 (let ((d (concat (getenv "HOME") "/.emacs.d/extra")))
   (if (file-exists-p d)
@@ -90,5 +98,12 @@
     (upcase-word -1))
 
 (global-set-key (kbd "M-U") 'upcase-prev-word)
+
+(let ((d (concat (getenv "HOME") "/Projects/gugod/bin")))
+  (if (file-exists-p d)
+      (progn
+        (add-to-list 'exec-path d)
+        (setenv "PATH" (concat (getenv "PATH") ":" d))
+        )))
 
 (provide 'my-setup)
