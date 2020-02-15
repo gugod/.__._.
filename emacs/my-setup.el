@@ -53,6 +53,7 @@
 (use-package dumb-jump
   :after (ivy)
   :config (dumb-jump-mode)
+  :bind (("C-M-g" . dumb-jump-go))
   :custom (dumb-jump-selector 'ivy))
 
 (use-package multiple-cursors
@@ -72,6 +73,8 @@
          ("C-S-c C-e" . mc/edit-ends-of-lines)
          ("C-S-c C-a" . mc/edit-beginnings-of-lines)))
 
+(use-package magit
+  :bind (("C-c C-g" . magit-status)))
 
 (global-set-key (kbd "M-z") 'zap-up-to-char)
 
