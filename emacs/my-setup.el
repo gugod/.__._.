@@ -19,16 +19,16 @@
   :bind ("C-#" . rg-dwim))
 
 (use-package ws-butler
-  :init (ws-butler-global-mode t))
+  :config (ws-butler-global-mode t))
 
 (use-package ace-jump-mode
   :bind ("C-c SPC" . ace-jump-mode))
 
 (use-package yasnippet
-  :init (yas-global-mode 1))
+  :config (yas-global-mode 1))
 
 (use-package dumb-jump
-  :init (dumb-jump-mode))
+  :config (dumb-jump-mode))
 
 (use-package multiple-cursors
   :bind (("C-S-c C-S-c" . mc/edit-lines)
@@ -36,6 +36,11 @@
          ("C-S-c C-e" .   mc/edit-ends-of-lines)
          ("C-S-c M-\"" .  mc/mark-all-like-this)
          ))
+
+(use-package major-mode-icons
+  :ensure t
+  :config
+  (major-mode-icons-mode 1))
 
 (use-package editorconfig
   :ensure t
