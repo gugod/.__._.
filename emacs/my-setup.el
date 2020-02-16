@@ -33,7 +33,8 @@
       show-paren-style 'parentheses
       frame-title-format "%b"
       browse-url-browser-function 'browse-url-default-macosx-browser
-      font-lock-maximum-decoration t)
+      font-lock-maximum-decoration t
+      shr-use-colors nil)
 
 (if IS-MAC
     (setq initial-frame-alist '((ns-appearance . "dark") (ns-transparent-titlebar . t))
@@ -44,6 +45,10 @@
   (if (file-exists-p d)
       (progn
         (mapc 'load-file (directory-files d t ".el$" t)))))
+
+(let ((default-directory "/usr/local/share/emacs/site-lisp/"))
+  (if (file-readable-p default-directory)
+      (normal-top-level-add-subdirs-to-load-path)))
 
 (use-package rg
   :bind ("C-#" . rg-dwim))
@@ -122,16 +127,17 @@
 ;;       )))
 ;; (add-hook 'window-setup-hook 'on-after-init)
 
+(setq auth-sources '("~/.authinfo.gpg"))
+(if IS-MAC
+    (progn
+      (add-to-list 'auth-sources 'macos-keychain-internet t)
+      (add-to-list 'auth-sources 'macos-keychain-generic t)))
 
-(let ((d (concat (getenv "HOME") "/Projects/gugod/bin")))
-  (if (file-exists-p d)
-      (progn
-        (add-to-list 'exec-path d)
-        (setenv "PATH" (concat (getenv "PATH") ":" d))
-        )))
+(require 'epa-file)
+(epa-file-enable)
 
 (require 'my-cperl)
 (require 'my-org)
-; (require 'my-mu4e)
+(require 'my-mu4e)
 
 (provide 'my-setup)
