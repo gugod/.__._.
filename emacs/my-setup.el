@@ -86,6 +86,10 @@
 (use-package magit
   :bind (("C-c C-g" . magit-status)))
 
+(use-package doom-modeline
+      :ensure t
+      :hook (after-init . doom-modeline-mode))
+
 (global-set-key (kbd "M-z") 'zap-up-to-char)
 
 (show-paren-mode t)
