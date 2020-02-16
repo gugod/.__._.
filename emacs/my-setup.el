@@ -1,3 +1,12 @@
+;; Setup `use-package'
+(unless (package-installed-p 'use-package)
+  (package-refresh-contents)
+  (package-install 'use-package))
+
+(setq use-package-always-ensure t)
+(setq use-package-always-defer t)
+(require 'use-package)
+
 (defconst IS-MAC     (eq system-type 'darwin))
 
 (set-language-environment 'UTF-8)
@@ -46,7 +55,9 @@
   :bind ("C-c SPC" . ace-jump-mode))
 
 (use-package yasnippet
-  :config (yas-global-mode 1))
+  :diminish yas-minor-mode
+  :hook (after-init . yas-global-mode)
+  :config (use-package yasnippet-snippets))
 
 (use-package ivy)
 
@@ -63,7 +74,6 @@
          ("C-S-c M-\"" .  mc/mark-all-like-this)))
 
 (use-package editorconfig
-  :ensure t
   :config
   (editorconfig-mode 1))
 
