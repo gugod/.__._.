@@ -7,34 +7,7 @@
 (setq use-package-always-defer t)
 (require 'use-package)
 
-(defconst IS-MAC     (eq system-type 'darwin))
-
-(set-language-environment 'UTF-8)
-(prefer-coding-system 'utf-8)
-
-(if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
-(if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
-(if (fboundp 'set-file-name-coding-system)
-    (set-file-name-coding-system 'utf-8))
-
-(setq backup-directory-alist `((".*" . ,temporary-file-directory))
-      auto-save-file-name-transforms `((".*" ,temporary-file-directory t))
-      cursor-type 'box
-      initial-scratch-message ""
-      inhibit-startup-message t
-      require-final-newline t
-      delete-by-moving-to-trash IS-MAC
-      indent-tabs-mode nil
-      scroll-margin 3
-      default-tab-width 8
-      scroll-conservatively 10000
-      inhibit-startup-message t
-      mouse-yank-at-point t
-      show-paren-style 'parentheses
-      frame-title-format "%b"
-      browse-url-browser-function 'browse-url-default-macosx-browser
-      font-lock-maximum-decoration t
-      shr-use-colors nil)
+(defconst IS-MAC (eq system-type 'darwin))
 
 (if IS-MAC
     (setq initial-frame-alist '((ns-appearance . "dark") (ns-transparent-titlebar . t))
@@ -95,6 +68,34 @@
       :ensure t
       :hook (after-init . doom-modeline-mode))
 
+(set-language-environment 'UTF-8)
+(prefer-coding-system 'utf-8)
+
+(if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
+(if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
+(if (fboundp 'set-file-name-coding-system)
+    (set-file-name-coding-system 'utf-8))
+
+(setq
+      auto-save-file-name-transforms `((".*" ,temporary-file-directory t))
+      backup-directory-alist `((".*" . ,temporary-file-directory))
+      browse-url-browser-function 'browse-url-default-macosx-browser
+      cursor-type 'box
+      default-tab-width 8
+      delete-by-moving-to-trash IS-MAC
+      font-lock-maximum-decoration t
+      frame-title-format "%b"
+      indent-tabs-mode nil
+      inhibit-startup-message t
+      initial-scratch-message ""
+      mouse-yank-at-point t
+      require-final-newline t
+      scroll-conservatively 10000
+      scroll-margin 3
+      show-paren-style 'parentheses
+      shr-use-colors nil
+      )
+
 (global-set-key (kbd "M-z") 'zap-up-to-char)
 
 (show-paren-mode t)
@@ -108,7 +109,7 @@
 ;; (put 'LaTeX-hide-environment 'disabled nil)
 ;; (fset 'yes-or-no-p 'y-or-n-p)
 
-(global-font-lock-mode nil)
+;; (global-font-lock-mode nil)
 
 ;; (global-set-key (kbd "s-{") 'previous-buffer)
 ;; (global-set-key (kbd "s-}") 'next-buffer)
@@ -140,4 +141,4 @@
 (require 'my-org)
 (require 'my-mu4e)
 
-(provide 'my-setup)
+(provide 'my-init)
