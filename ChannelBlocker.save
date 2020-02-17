@@ -1,0 +1,23 @@
+{
+  "0": {
+    "Unbox Therapy": 53,
+    "StarCraft Esports": 53,
+    "Falcon Paladin": 53,
+    "科幻梦工场": 53
+  },
+  "1": {
+    "starcraft": 0,
+    "xiaomi": 0,
+    "must[- ]+(eat|have|buy)": 0
+  },
+  "config": {
+    "0": 0,
+    "1": true,
+    "2": true,
+    "3": false,
+    "4": "#717171",
+    "5": 140,
+    "6": 1000,
+    "7": false
+  }
+}
