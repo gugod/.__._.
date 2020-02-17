@@ -62,7 +62,7 @@
          ("C-S-c C-a" . mc/edit-beginnings-of-lines)))
 
 (use-package magit
-  :bind (("C-c C-g" . magit-status)))
+  :bind (("C-x g" . magit-status)))
 
 (use-package doom-modeline
       :ensure t
