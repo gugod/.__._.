@@ -68,6 +68,9 @@
       :ensure t
       :hook (after-init . doom-modeline-mode))
 
+(use-package markdown-mode)
+(use-package ack)
+
 (set-language-environment 'UTF-8)
 (prefer-coding-system 'utf-8)
 
