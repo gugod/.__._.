@@ -40,7 +40,6 @@
 (use-package ivy)
 
 (use-package dumb-jump
-  :after (ivy)
   :config (dumb-jump-mode)
   :bind (("C-M-g" . dumb-jump-go))
   :custom (dumb-jump-selector 'ivy))
@@ -67,6 +66,9 @@
 (use-package doom-modeline
       :ensure t
       :hook (after-init . doom-modeline-mode))
+
+(use-package expand-region
+  :bind ("C-@" . er/expand-region))
 
 (set-language-environment 'UTF-8)
 (prefer-coding-system 'utf-8)
