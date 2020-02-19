@@ -62,7 +62,7 @@
          ("C-S-c C-a" . mc/edit-beginnings-of-lines)))
 
 (use-package magit
-  :bind (("C-c C-g" . magit-status)))
+  :bind (("C-x g" . magit-status)))
 
 (use-package doom-modeline
       :ensure t
@@ -151,6 +151,8 @@
 
 (require 'my-cperl)
 (require 'my-org)
-(require 'my-mu4e)
+
+(if (and IS-MAC (directory-name-p "/usr/local/share/emacs/site-lisp/mu4e"))
+    (require 'my-mu4e))
 
 (provide 'my-init)
