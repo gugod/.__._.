@@ -131,6 +131,15 @@
 ;;       )))
 ;; (add-hook 'window-setup-hook 'on-after-init)
 
+;; mail
+(setq message-send-mail-function 'message-send-mail-with-sendmail)
+(if (file-executable-p "/usr/local/bin/msmtp")
+    (setq sendmail-program "/usr/local/bin/msmtp")
+  (if (file-executable-p "/usr/bin/msmtp")
+      (setq sendmail-program "/usr/bin/msmtp")))
+
+;; gpg
+;; Note: set epg-gpg-program
 (setq auth-sources '("~/.authinfo.gpg"))
 (if IS-MAC
     (progn
