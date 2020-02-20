@@ -53,7 +53,7 @@
   (interactive)
   (newline)                             ;
   (newline)
-  (previous-line))
+  (forward-line -1))
 
 (defun kill-last-paragraph ()
   (interactive)
