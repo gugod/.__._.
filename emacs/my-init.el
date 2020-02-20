@@ -78,8 +78,7 @@
 (if (fboundp 'set-file-name-coding-system)
     (set-file-name-coding-system 'utf-8))
 
-(setq
-      auto-save-file-name-transforms `((".*" ,temporary-file-directory t))
+(setq auto-save-file-name-transforms `((".*" ,temporary-file-directory t))
       backup-directory-alist `((".*" . ,temporary-file-directory))
       browse-url-browser-function 'browse-url-default-macosx-browser
       cursor-type 'box
@@ -87,21 +86,18 @@
       delete-by-moving-to-trash IS-MAC
       font-lock-maximum-decoration t
       frame-title-format "%b"
-      indent-tabs-mode nil
       inhibit-startup-message t
       initial-scratch-message ""
       mouse-yank-at-point t
-      require-final-newline t
       scroll-conservatively 10000
       scroll-margin 3
-      show-paren-style 'parentheses
-      shr-use-colors nil
-      )
+      shr-use-colors nil)
+
+(setq-default indent-tabs-mode nil)
 
 (global-set-key (kbd "M-z") 'zap-up-to-char)
 
 (show-paren-mode t)
-(setq frame-title-format "%b")
 (auto-image-file-mode)
 
 ;; (put 'set-goal-column 'disabled nil)

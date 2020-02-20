@@ -25,6 +25,7 @@
   (setq cperl-merge-trailing-else t)
   (setq cperl-pod-here-scan t)
   (setq cperl-regexp-scan nil)
+  (setq indent-tabs-mode nil)
   (local-set-key (kbd "<RET>") 'newline-and-indent)
   (local-set-key (kbd "C-c c") 'cperl-check-syntax)
   (local-set-key (kbd "C-c p") 'cperl-perldoc))
