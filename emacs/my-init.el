@@ -70,6 +70,10 @@
 (use-package expand-region
   :bind ("C-@" . er/expand-region))
 
+(use-package markdown-mode)
+
+(use-package ack)
+
 (set-language-environment 'UTF-8)
 (prefer-coding-system 'utf-8)
 
@@ -126,6 +130,15 @@
 ;;       )))
 ;; (add-hook 'window-setup-hook 'on-after-init)
 
+;; mail
+(setq message-send-mail-function 'message-send-mail-with-sendmail)
+(if (file-executable-p "/usr/local/bin/msmtp")
+    (setq sendmail-program "/usr/local/bin/msmtp")
+  (if (file-executable-p "/usr/bin/msmtp")
+      (setq sendmail-program "/usr/bin/msmtp")))
+
+;; gpg
+;; Note: set epg-gpg-program
 (setq auth-sources '("~/.authinfo.gpg"))
 (if IS-MAC
     (progn
