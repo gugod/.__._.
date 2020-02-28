@@ -63,9 +63,9 @@
 (use-package magit
   :bind (("C-x g" . magit-status)))
 
-(use-package doom-modeline
+(use-package mood-line
       :ensure t
-      :hook (after-init . doom-modeline-mode))
+      :hook (after-init . mood-line-mode))
 
 (use-package expand-region
   :bind ("C-@" . er/expand-region))
