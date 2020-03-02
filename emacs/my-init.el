@@ -10,9 +10,11 @@
 (defconst IS-MAC (eq system-type 'darwin))
 
 (if IS-MAC
-    (setq initial-frame-alist '((ns-appearance . "dark") (ns-transparent-titlebar . t))
-          mac-option-modifier 'meta
-          mac-command-modifier 'hyper))
+    (progn
+      (setq initial-frame-alist '((ns-appearance . "dark") (ns-transparent-titlebar . t))
+            mac-option-modifier 'meta
+            mac-command-modifier 'hyper)
+      (add-to-list 'exec-path "/usr/local/bin")))
 
 (let ((d (concat (getenv "HOME") "/.emacs.d/extra")))
   (if (file-exists-p d)
