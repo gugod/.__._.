@@ -1,3 +1,4 @@
+
 ;; Setup `use-package'
 (unless (package-installed-p 'use-package)
   (package-refresh-contents)
@@ -155,5 +156,9 @@
 
 (if (and IS-MAC (directory-name-p "/usr/local/share/emacs/site-lisp/mu4e"))
     (require 'my-mu4e))
+
+;; put custom-file in
+(setq custom-file "~/.emacs.d/custom.el")
+(load custom-file)
 
 (provide 'my-init)
