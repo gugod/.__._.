@@ -77,6 +77,9 @@
 
 (use-package ack)
 
+(use-package find-file-in-project
+  :bind ("C-c f" . ffip))
+
 (set-language-environment 'UTF-8)
 (prefer-coding-system 'utf-8)
 
@@ -115,7 +118,6 @@
 ;; (fset 'yes-or-no-p 'y-or-n-p)
 
 ;; (global-font-lock-mode nil)
-
 ;; (global-set-key (kbd "s-{") 'previous-buffer)
 ;; (global-set-key (kbd "s-}") 'next-buffer)
 
