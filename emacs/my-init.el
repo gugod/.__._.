@@ -151,7 +151,7 @@
 (require 'my-cperl)
 (require 'my-org)
 
-(if (and IS-MAC (directory-name-p "/usr/local/share/emacs/site-lisp/mu4e"))
+(if (directory-name-p "/usr/local/share/emacs/site-lisp/mu4e")
     (require 'my-mu4e))
 
 (provide 'my-init)
