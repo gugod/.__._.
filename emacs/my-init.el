@@ -1,3 +1,4 @@
+
 ;; Setup `use-package'
 (unless (package-installed-p 'use-package)
   (package-refresh-contents)
@@ -10,9 +11,11 @@
 (defconst IS-MAC (eq system-type 'darwin))
 
 (if IS-MAC
-    (setq initial-frame-alist '((ns-appearance . "dark") (ns-transparent-titlebar . t))
-          mac-option-modifier 'meta
-          mac-command-modifier 'hyper))
+    (progn
+      (setq initial-frame-alist '((ns-appearance . "dark") (ns-transparent-titlebar . t))
+            mac-option-modifier 'meta
+            mac-command-modifier 'hyper)
+      (add-to-list 'exec-path "/usr/local/bin")))
 
 (let ((d (concat (getenv "HOME") "/.emacs.d/extra")))
   (if (file-exists-p d)
@@ -74,6 +77,9 @@
 
 (use-package ack)
 
+(use-package find-file-in-project
+  :bind ("C-c f" . ffip))
+
 (set-language-environment 'UTF-8)
 (prefer-coding-system 'utf-8)
 
@@ -112,7 +118,6 @@
 ;; (fset 'yes-or-no-p 'y-or-n-p)
 
 ;; (global-font-lock-mode nil)
-
 ;; (global-set-key (kbd "s-{") 'previous-buffer)
 ;; (global-set-key (kbd "s-}") 'next-buffer)
 
@@ -153,5 +158,9 @@
 
 (if (directory-name-p "/usr/local/share/emacs/site-lisp/mu4e")
     (require 'my-mu4e))
+
+;; put custom-file in
+(setq custom-file "~/.emacs.d/custom.el")
+(load custom-file)
 
 (provide 'my-init)
