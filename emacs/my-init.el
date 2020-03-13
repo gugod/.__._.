@@ -80,6 +80,8 @@
 (use-package find-file-in-project
   :bind ("C-c f" . ffip))
 
+(use-package try)
+
 (set-language-environment 'UTF-8)
 (prefer-coding-system 'utf-8)
 
