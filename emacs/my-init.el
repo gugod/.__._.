@@ -155,6 +155,7 @@
 
 (require 'my-cperl)
 (require 'my-org)
+(require 'my-fun)
 
 (if (directory-name-p "/usr/local/share/emacs/site-lisp/mu4e")
     (require 'my-mu4e))
