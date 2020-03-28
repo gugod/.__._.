@@ -159,7 +159,7 @@
 (require 'my-org)
 (require 'my-fun)
 
-(if (directory-name-p "/usr/local/share/emacs/site-lisp/mu/mu4e")
+(if (directory-name-p "/usr/local/share/emacs/site-lisp/mu/mu4e/")
     (require 'my-mu4e))
 
 ;; put custom-file in
