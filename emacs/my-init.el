@@ -111,17 +111,7 @@
 
 (show-paren-mode t)
 (auto-image-file-mode)
-
-;; (put 'set-goal-column 'disabled nil)
-;; (put 'narrow-to-region 'disabled nil)
-;; (put 'upcase-region 'disabled nil)
-;; (put 'downcase-region 'disabled nil)
-;; (put 'LaTeX-hide-environment 'disabled nil)
-;; (fset 'yes-or-no-p 'y-or-n-p)
-
-;; (global-font-lock-mode nil)
-;; (global-set-key (kbd "s-{") 'previous-buffer)
-;; (global-set-key (kbd "s-}") 'next-buffer)
+(fset 'yes-or-no-p 'y-or-n-p)
 
 ;; (defun on-after-init ()
 ;;   (unless (display-graphic-p (selected-frame))
