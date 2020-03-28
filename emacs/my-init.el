@@ -80,6 +80,8 @@
 (use-package find-file-in-project
   :bind ("C-c f" . ffip))
 
+(use-package try)
+
 (set-language-environment 'UTF-8)
 (prefer-coding-system 'utf-8)
 
@@ -155,6 +157,7 @@
 
 (require 'my-cperl)
 (require 'my-org)
+(require 'my-fun)
 
 (if (directory-name-p "/usr/local/share/emacs/site-lisp/mu/mu4e")
     (require 'my-mu4e))
