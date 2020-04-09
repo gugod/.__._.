@@ -71,7 +71,7 @@
       :hook (after-init . mood-line-mode))
 
 (use-package expand-region
-  :bind ("C-@" . er/expand-region))
+  :bind ("C-c C-SPC" . er/expand-region))
 
 (use-package markdown-mode)
 
