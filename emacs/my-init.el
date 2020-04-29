@@ -82,6 +82,14 @@
 
 (use-package try)
 
+(use-package nov
+  :config
+  (add-to-list 'auto-mode-alist '("\\.epub\\'" . nov-mode)))
+
+;; (use-package perl6-mode
+;;   :ensure t
+;;   :defer t)
+
 (set-language-environment 'UTF-8)
 (prefer-coding-system 'utf-8)
 
