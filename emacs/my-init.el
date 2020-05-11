@@ -78,6 +78,7 @@
 (use-package ack)
 
 (use-package find-file-in-project
+  :config (setq ffip-use-rust-fd t)
   :bind ("C-c f" . ffip))
 
 (use-package try)
