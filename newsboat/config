@@ -1,4 +1,9 @@
-browser "open %u"
+# urls-source "opml"
+# opml-url "https://gugod.org/bazqux-reader-subscriptions.xml"
+
+browser "open -a 'Brave Browser' %u"
 bookmark-cmd "~/bin/newsboat-bookmark.sh"
 bookmark-autopilot yes
-download-path "~/Downloads"
+download-path "~/Downloads/podcasts"
+
+player "mpv"
