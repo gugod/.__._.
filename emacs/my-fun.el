@@ -74,4 +74,9 @@
            "\n" ""
            (shell-command-to-string "tmux showenv|grep ^SSH_AUTH_SOCK|cut -d = -f 2"))))
 
+(defun eww-new-buffer-with-url (url)
+  (switch-to-buffer (generate-new-buffer "eww"))
+  (eww-mode)
+  (eww url))
+
 (provide 'my-fun)
