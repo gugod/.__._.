@@ -166,11 +166,12 @@
 (load custom-file)
 
 (when (and (eq system-type 'darwin) (display-graphic-p))
-  (set-face-attribute 'default nil :height 230 :family "Roboto Mono")
+  (set-fontset-font t 'kana (font-spec :name "MotoyaLMaru"))
   (set-fontset-font t 'han (font-spec :name "jf open 粉圓 1.0"))
   (set-fontset-font t 'bopomofo (font-spec :name "jf open 粉圓 1.0"))
   (set-fontset-font t 'cjk-misc (font-spec :name "jf open 粉圓 1.0"))
-  ;; MotoyaLMaru == "Kosugi Maru"
-  (set-fontset-font t 'kana (font-spec :name "MotoyaLMaru")))
+  (set-fontset-font t 'symbol (font-spec :name "Roboto Mono"))
+  (set-face-attribute 'default nil :height 230 :family "Roboto Mono"))
+
 
 (provide 'my-init)
