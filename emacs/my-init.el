@@ -87,9 +87,11 @@
   :config
   (add-to-list 'auto-mode-alist '("\\.epub\\'" . nov-mode)))
 
-;; (use-package perl6-mode
-;;   :ensure t
-;;   :defer t)
+(use-package feebleline)
+
+(use-package raku-mode
+  :ensure t
+  :defer t)
 
 (set-language-environment 'UTF-8)
 (prefer-coding-system 'utf-8)
