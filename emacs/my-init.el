@@ -172,7 +172,8 @@
   (set-fontset-font t 'han (font-spec :family "jf-openhuninn-1.1"))
   (set-fontset-font t 'bopomofo (font-spec :family "jf-openhuninn-1.1"))
   (set-fontset-font t 'cjk-misc (font-spec :family "jf-openhuninn-1.1"))
-  (set-fontset-font t 'symbol (font-spec :name "Roboto Mono"))
+  (set-fontset-font t 'symbol (font-spec :name "Symbola") nil 'append)
+  (set-fontset-font t 'symbol (font-spec :name "Roboto Mono") nil 'append)
   (set-face-attribute 'default nil :height 230 :family "Roboto Mono"))
 
 (provide 'my-init)
