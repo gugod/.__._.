@@ -88,10 +88,8 @@
   (add-to-list 'auto-mode-alist '("\\.epub\\'" . nov-mode)))
 
 (use-package feebleline)
-
-(use-package raku-mode
-  :ensure t
-  :defer t)
+(use-package raku-mode)
+(use-package rust-mode)
 
 (set-language-environment 'UTF-8)
 (prefer-coding-system 'utf-8)
