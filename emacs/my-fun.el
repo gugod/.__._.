@@ -79,4 +79,18 @@
   (eww-mode)
   (eww url))
 
+(defun reset-all-faces ()
+  (interactive)
+  (progn
+    (dolist (f (list 'default))
+      (set-face-attribute f nil :foreground "#222222" :background "#d0d1d0" :bold nil :underline nil))
+
+    ;;; Reverse
+    (dolist (f (list 'highlight 'region 'isearch 'show-paren-match-expression))
+      (set-face-attribute f nil :foreground  "#d0d1d0" :background"#222222"))
+
+    (set-face-attribute 'show-paren-mismatch f nil :weight "bold" :strike-through t)
+    (set-face-attribute 'show-paren-match    f nil :weight "bold")
+  ))
+
 (provide 'my-fun)
