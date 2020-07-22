@@ -177,4 +177,13 @@
   (set-fontset-font t 'symbol (font-spec :name "Roboto Mono") nil 'append)
   (set-face-attribute 'default nil :height 230 :family "Roboto Mono"))
 
+(when (fboundp 'eww)
+  (add-hook 'eww-after-render-hook
+            (lambda ()
+              (when (eq major-mode 'eww-mode )
+                (let ((title (plist-get eww-data :title)))
+                  (if title
+                      (rename-buffer (concat "[eww] " title) t)
+                    (rename-buffer "eww" t)))))))
+
 (provide 'my-init)
