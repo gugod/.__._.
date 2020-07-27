@@ -115,6 +115,7 @@
       mouse-yank-at-point t
       scroll-conservatively 10000
       scroll-margin 3
+      shr-use-fonts nil
       shr-use-colors nil)
 
 (setq-default indent-tabs-mode nil)
@@ -175,7 +176,7 @@
   (set-fontset-font t 'cjk-misc (font-spec :family "jf-openhuninn-1.1"))
   (set-fontset-font t 'symbol (font-spec :name "Symbola") nil 'append)
   (set-fontset-font t 'symbol (font-spec :name "Roboto Mono") nil 'append)
-  (set-face-attribute 'default nil :height 230 :family "Roboto Mono"))
+  (set-face-attribute 'default nil :height 180 :family "Roboto Mono"))
 
 (when (fboundp 'eww)
   (add-hook 'eww-after-render-hook
