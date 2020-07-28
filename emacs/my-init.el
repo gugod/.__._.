@@ -15,7 +15,9 @@
       (setq initial-frame-alist '((ns-appearance . "dark") (ns-transparent-titlebar . t))
             mac-option-modifier 'meta
             mac-command-modifier 'hyper)
-      (add-to-list 'exec-path "/usr/local/bin")))
+      (add-to-list 'exec-path "/usr/local/bin")
+      (setenv "PATH" (concat "/usr/local/bin" ":" (getenv "PATH")))
+      ))
 
 (let ((d (concat (getenv "HOME") "/.emacs.d/extra")))
   (if (file-exists-p d)
