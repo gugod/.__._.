@@ -1,3 +1,9 @@
+[push]
+	default = current
+
+[pull]
+	ff = only
+
 # non-trivial aliases
 [alias]
         m = merge --strategy-option=patience --no-ff --no-edit
