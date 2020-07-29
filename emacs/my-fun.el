@@ -1,3 +1,11 @@
+(defun browse-url-vlc (url &rest args)
+  "Open the given url with vlc (assume vlc knows how to handles it)"
+  (apply #'start-process (concat "vlc " url) nil "vlc" (list url)))
+
+(defun browse-url-mpv (url &rest args)
+  "Open the given url with mpv (assume mpv knows how to handles it)"
+  (apply #'start-process (concat "mpv " url) nil "mpv" (list url)))
+
 (defun insert-time ()
   (interactive)
   (insert (format-time-string "%Y-%m-%dT%T%z")))
