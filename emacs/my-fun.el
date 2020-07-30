@@ -4,7 +4,11 @@
 
 (defun browse-url-mpv (url &rest args)
   "Open the given url with mpv (assume mpv knows how to handles it)"
-  (apply #'start-process (concat "mpv " url) nil "mpv" (list url)))
+  (apply #'start-process
+         (concat "mpv " url)
+         (get-buffer-create "*mpv*")
+         "mpv"
+         (list "--ytdl-format=best[height<=720]" "--force-window" url)))
 
 (defun insert-time ()
   (interactive)
