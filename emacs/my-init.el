@@ -92,9 +92,22 @@
 (use-package raku-mode
   :defer t)
 
+(use-package elfeed
+  :defer t)
+
+(use-package emms
+  :defer t)
+
 (use-package feebleline)
 
 (use-package rust-mode)
+
+(use-package emms
+  :config (progn
+            (require 'emms-setup)
+            (emms-all)
+            (emms-default-players)
+            ))
 
 (set-language-environment 'UTF-8)
 (prefer-coding-system 'utf-8)
