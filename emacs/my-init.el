@@ -202,4 +202,9 @@
                       (rename-buffer (concat "[eww] " title) t)
                     (rename-buffer "eww" t)))))))
 
+
+(setq face-font-rescale-alist
+      '(("jf-openhuninn-1.1" . 1.2)
+        ("-cdac$" . 1.3)))
+
 (provide 'my-init)
