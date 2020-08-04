@@ -93,7 +93,11 @@
   :defer t)
 
 (use-package elfeed
-  :defer t)
+  :custom ((elfeed-search-filter "@1-day +unread")
+	   (elfeed-db-directory "~/.emacs.d/elfeed")))
+
+(use-package elfeed-org
+  :after elfeed)
 
 (use-package emms
   :defer t)
@@ -206,5 +210,7 @@
 (setq face-font-rescale-alist
       '(("jf-openhuninn-1.1" . 1.2)
         ("-cdac$" . 1.3)))
+
+(elfeed-org)
 
 (provide 'my-init)
