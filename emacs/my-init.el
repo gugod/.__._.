@@ -228,4 +228,6 @@
 (add-hook 'after-make-frame-functions 'my/set-background-for-terminal)
 (add-hook 'window-setup-hook 'my/set-background-for-terminal)
 
+(add-hook 'prog-mode-hook (lambda () (setq mode-line-format nil)))
+
 (provide 'my-init)
