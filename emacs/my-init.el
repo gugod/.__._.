@@ -195,15 +195,6 @@
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file)
 
-(when (and (eq system-type 'darwin) (display-graphic-p))
-  (set-fontset-font t 'kana (font-spec :name "MotoyaLMaru"))
-  (set-fontset-font t 'han (font-spec :family "jf-openhuninn-1.1"))
-  (set-fontset-font t 'bopomofo (font-spec :family "jf-openhuninn-1.1"))
-  (set-fontset-font t 'cjk-misc (font-spec :family "jf-openhuninn-1.1"))
-  (set-fontset-font t 'symbol (font-spec :name "Symbola") nil 'append)
-  (set-fontset-font t 'symbol (font-spec :name "BitstreamVeraSansMono Nerd Font Mono") nil 'append)
-  (set-face-attribute 'default nil :height 240 :family "BitstreamVeraSansMono Nerd Font Mono"))
-
 (when (fboundp 'eww)
   (add-hook 'eww-after-render-hook
             (lambda ()
@@ -213,6 +204,13 @@
                       (rename-buffer (concat "[eww] " title) t)
                     (rename-buffer "eww" t)))))))
 
+(when (and (eq system-type 'darwin) (display-graphic-p))
+  (set-face-attribute 'default nil :height 240 :family "DM Mono")
+  (set-fontset-font t 'kana (font-spec :name "MotoyaLMaru"))
+  (set-fontset-font t 'han (font-spec :family "jf-openhuninn-1.1"))
+  (set-fontset-font t 'bopomofo (font-spec :family "jf-openhuninn-1.1"))
+  (set-fontset-font t 'cjk-misc (font-spec :family "jf-openhuninn-1.1"))
+  (set-fontset-font t 'symbol (font-spec :name "Symbola") nil 'append))
 
 (setq face-font-rescale-alist
       '(("jf-openhuninn-1.1" . 1.2)
