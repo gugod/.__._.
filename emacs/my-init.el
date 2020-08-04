@@ -135,6 +135,7 @@
       default-tab-width 8
       delete-by-moving-to-trash IS-MAC
       font-lock-maximum-decoration t
+      frame-resize-pixelwise t
       frame-title-format "%b"
       inhibit-startup-message t
       initial-scratch-message ""
