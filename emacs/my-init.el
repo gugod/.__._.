@@ -75,8 +75,6 @@
 (use-package expand-region
   :bind ("C-c C-SPC" . er/expand-region))
 
-(use-package markdown-mode)
-
 (use-package ack)
 
 (use-package find-file-in-project
@@ -89,22 +87,31 @@
   :config
   (add-to-list 'auto-mode-alist '("\\.epub\\'" . nov-mode)))
 
-(use-package raku-mode
-  :defer t)
-
 (use-package elfeed
   :custom ((elfeed-search-filter "@1-day +unread")
 	   (elfeed-db-directory "~/.emacs.d/elfeed")))
 
-(use-package elfeed-org
-  :after elfeed)
+(use-package elfeed-org)
 
-(use-package emms
-  :defer t)
+(use-package elfeed-score
+  :config (progn
+            (elfeed-score-enable)
+            (define-key elfeed-search-mode-map "=" elfeed-score-map)))
+
+(elfeed-org)
+
+(use-package emms)
 
 (use-package feebleline)
 
-(use-package rust-mode)
+(use-package markdown-mode
+  :defer t)
+
+(use-package raku-mode
+  :defer t)
+
+(use-package rust-mode
+  :defer t)
 
 (use-package emms
   :config (progn
@@ -194,8 +201,8 @@
   (set-fontset-font t 'bopomofo (font-spec :family "jf-openhuninn-1.1"))
   (set-fontset-font t 'cjk-misc (font-spec :family "jf-openhuninn-1.1"))
   (set-fontset-font t 'symbol (font-spec :name "Symbola") nil 'append)
-  (set-fontset-font t 'symbol (font-spec :name "Roboto Mono") nil 'append)
-  (set-face-attribute 'default nil :height 180 :family "Roboto Mono"))
+  (set-fontset-font t 'symbol (font-spec :name "BitstreamVeraSansMono Nerd Font Mono") nil 'append)
+  (set-face-attribute 'default nil :height 240 :family "BitstreamVeraSansMono Nerd Font Mono"))
 
 (when (fboundp 'eww)
   (add-hook 'eww-after-render-hook
@@ -211,6 +218,14 @@
       '(("jf-openhuninn-1.1" . 1.2)
         ("-cdac$" . 1.3)))
 
-(elfeed-org)
+;; Disable Theme BG color in terminal
+;; https://stackoverflow.com/questions/19054228/emacs-disable-theme-background-color-in-terminal
+(defun my/set-background-for-terminal (&optional frame)
+  (or frame (setq frame (selected-frame)))
+  "unsets the background color in terminal mode"
+  (unless (display-graphic-p frame)
+    (set-face-background 'default "unspecified-bg" frame)))
+(add-hook 'after-make-frame-functions 'my/set-background-for-terminal)
+(add-hook 'window-setup-hook 'my/set-background-for-terminal)
 
 (provide 'my-init)
