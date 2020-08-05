@@ -206,12 +206,12 @@
                     (rename-buffer "eww" t)))))))
 
 (when (and (eq system-type 'darwin) (display-graphic-p))
-  (set-face-attribute 'default nil :height 240 :family "DM Mono")
   (set-fontset-font t 'kana (font-spec :name "MotoyaLMaru"))
   (set-fontset-font t 'han (font-spec :family "jf-openhuninn-1.1"))
   (set-fontset-font t 'bopomofo (font-spec :family "jf-openhuninn-1.1"))
   (set-fontset-font t 'cjk-misc (font-spec :family "jf-openhuninn-1.1"))
-  (set-fontset-font t 'symbol (font-spec :name "Symbola") nil 'append))
+  (set-fontset-font t 'symbol (font-spec :name "Symbola") nil 'append)
+  (set-face-attribute 'default nil :height 240 :family "DM Mono"))
 
 (setq face-font-rescale-alist
       '(("jf-openhuninn-1.1" . 1.2)
@@ -226,5 +226,7 @@
     (set-face-background 'default "unspecified-bg" frame)))
 (add-hook 'after-make-frame-functions 'my/set-background-for-terminal)
 (add-hook 'window-setup-hook 'my/set-background-for-terminal)
+
+(add-hook 'prog-mode-hook (lambda () (setq mode-line-format nil)))
 
 (provide 'my-init)
