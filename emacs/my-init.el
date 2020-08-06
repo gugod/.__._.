@@ -92,10 +92,12 @@
             (interactive)
             (mark-whole-buffer)
             (elfeed-search-untag-all-unread))
-  :bind (:map elfeed-search-mode-map
+  :bind ((:map elfeed-show-mode-map
+              ("E" . my/elfeed-enqueue-link-to-mpv-playlist))
+         (:map elfeed-search-mode-map
               ("w" . elfeed-show-yank)
               ("E" . my/elfeed-enqueue-link-to-mpv-playlist)
-              ("H-k" . my/elfeed-mark-all-as-read))
+              ("H-k" . my/elfeed-mark-all-as-read)))
   :custom ((elfeed-search-filter "@1-day +unread")
 	   (elfeed-db-directory "~/.emacs.d/elfeed")))
 
