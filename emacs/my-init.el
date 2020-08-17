@@ -231,4 +231,8 @@
 
 ;; (add-hook 'prog-mode-hook (lambda () (setq mode-line-format nil)))
 
+;; Only in Emacs 27
+(if (equal emacs-version "27.1")
+    (defalias 'epa--decode-coding-string 'decode-coding-string))
+
 (provide 'my-init)
