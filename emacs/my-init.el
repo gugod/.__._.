@@ -1,11 +1,8 @@
-
 ;; Setup `use-package'
 (unless (package-installed-p 'use-package)
   (package-refresh-contents)
   (package-install 'use-package))
 
-(setq use-package-always-ensure t)
-(setq use-package-always-defer t)
 (require 'use-package)
 
 (defconst IS-MAC (eq system-type 'darwin))
@@ -68,10 +65,6 @@
 (use-package magit
   :bind (("C-x g" . magit-status)))
 
-(use-package mood-line
-      :ensure t
-      :hook (after-init . mood-line-mode))
-
 (use-package expand-region
   :bind ("C-c C-SPC" . er/expand-region))
 
@@ -108,20 +101,19 @@
             (elfeed-score-enable)
             (define-key elfeed-search-mode-map "=" elfeed-score-map)))
 
-(elfeed-org)
+;; (elfeed-org)
 
 (use-package emms)
 
-(use-package feebleline)
+(use-package feebleline
+  :ensure t
+  :config (feebleline-mode 1))
 
-(use-package markdown-mode
-  :defer t)
+(use-package markdown-mode)
 
-(use-package raku-mode
-  :defer t)
+(use-package raku-mode)
 
-(use-package rust-mode
-  :defer t)
+(use-package rust-mode)
 
 (use-package emms
   :config (progn
@@ -237,6 +229,6 @@
 (add-hook 'after-make-frame-functions 'my/set-background-for-terminal)
 (add-hook 'window-setup-hook 'my/set-background-for-terminal)
 
-(add-hook 'prog-mode-hook (lambda () (setq mode-line-format nil)))
+;; (add-hook 'prog-mode-hook (lambda () (setq mode-line-format nil)))
 
 (provide 'my-init)
