@@ -122,6 +122,9 @@
             (emms-default-players)
             ))
 
+(use-package multi-term
+  :ensure t)
+
 (set-language-environment 'UTF-8)
 (prefer-coding-system 'utf-8)
 
