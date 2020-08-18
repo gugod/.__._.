@@ -94,14 +94,13 @@
   :custom ((elfeed-search-filter "@1-day +unread")
 	   (elfeed-db-directory "~/.emacs.d/elfeed")))
 
-(use-package elfeed-org)
+(use-package elfeed-org
+  :config (elfeed-org))
 
 (use-package elfeed-score
   :config (progn
             (elfeed-score-enable)
             (define-key elfeed-search-mode-map "=" elfeed-score-map)))
-
-;; (elfeed-org)
 
 (use-package emms)
 
