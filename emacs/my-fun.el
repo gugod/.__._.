@@ -1,13 +1,6 @@
 (defun my/enqueue-mpv-playlist (url)
   (write-region (concat url "\n") nil "~/var/mpv-playlist" t nil "~/var/mpv-playlist.lock"))
 
-(defun my/elfeed-enqueue-link-to-mpv-playlist (entry)
-  "Enqueue the current entry link URL to mpv playlist"
-  (interactive (list (or elfeed-show-entry
-                         (elfeed-search-selected :ignore-region))))
-  (let ((link (elfeed-entry-link entry)))
-    (my/enqueue-mpv-playlist link)))
-
 (defun browse-url-vlc (url &rest args)
   "Open the given url with vlc (assume vlc knows how to handles it)"
   (apply #'start-process (concat "vlc " url) nil "vlc" (list url)))
@@ -114,5 +107,17 @@
     (set-face-attribute 'show-paren-mismatch f nil :weight "bold" :strike-through t)
     (set-face-attribute 'show-paren-match    f nil :weight "bold")
   ))
+
+(defun my/elfeed-mark-all-as-read ()
+  (interactive)
+  (mark-whole-buffer)
+  (elfeed-search-untag-all-unread))
+
+(defun my/elfeed-enqueue-link-to-mpv-playlist (entry)
+  "Enqueue the current entry link URL to mpv playlist"
+  (interactive (list (or elfeed-show-entry
+                         (elfeed-search-selected :ignore-region))))
+  (let ((link (elfeed-entry-link entry)))
+    (my/enqueue-mpv-playlist link)))
 
 (provide 'my-fun)

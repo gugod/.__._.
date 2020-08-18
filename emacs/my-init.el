@@ -13,8 +13,7 @@
             mac-option-modifier 'meta
             mac-command-modifier 'hyper)
       (add-to-list 'exec-path "/usr/local/bin")
-      (setenv "PATH" (concat "/usr/local/bin" ":" (getenv "PATH")))
-      ))
+      (setenv "PATH" (concat "/usr/local/bin" ":" (getenv "PATH")))))
 
 (let ((d (concat (getenv "HOME") "/.emacs.d/extra")))
   (if (file-exists-p d)
@@ -81,10 +80,6 @@
   (add-to-list 'auto-mode-alist '("\\.epub\\'" . nov-mode)))
 
 (use-package elfeed
-  :config (defun my/elfeed-mark-all-as-read ()
-            (interactive)
-            (mark-whole-buffer)
-            (elfeed-search-untag-all-unread))
   :bind ((:map elfeed-show-mode-map
               ("E" . my/elfeed-enqueue-link-to-mpv-playlist))
          (:map elfeed-search-mode-map
@@ -118,8 +113,7 @@
   :config (progn
             (require 'emms-setup)
             (emms-all)
-            (emms-default-players)
-            ))
+            (emms-default-players)))
 
 (use-package multi-term
   :ensure t)
@@ -127,14 +121,17 @@
 (set-language-environment 'UTF-8)
 (prefer-coding-system 'utf-8)
 
-(if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
-(if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
-(if (fboundp 'set-file-name-coding-system)
-    (set-file-name-coding-system 'utf-8))
+(elfeed-org)
+(require 'uniquify)
+(menu-bar-mode -1)
+(scroll-bar-mode -1)
+(tool-bar-mode -1)
+(set-file-name-coding-system 'utf-8)
 
 (setq auto-save-file-name-transforms `((".*" ,temporary-file-directory t))
       backup-directory-alist `((".*" . ,temporary-file-directory))
       browse-url-browser-function 'browse-url-default-macosx-browser
+      uniquify-buffer-name-style 'forward
       cursor-type 'box
       default-tab-width 8
       delete-by-moving-to-trash IS-MAC
@@ -145,7 +142,7 @@
       initial-scratch-message ""
       mouse-yank-at-point t
       scroll-conservatively 10000
-      scroll-margin 3
+      scroll-margin 2
       shr-use-fonts nil
       shr-use-colors nil)
 
