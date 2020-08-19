@@ -1,3 +1,10 @@
+(set-language-environment 'UTF-8)
+(prefer-coding-system 'utf-8)
+(if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
+(if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
+(if (fboundp 'set-file-name-coding-system)
+    (set-file-name-coding-system 'utf-8))
+
 ;; Setup `use-package'
 (unless (package-installed-p 'use-package)
   (package-refresh-contents)
@@ -123,14 +130,6 @@
 
 (use-package multi-term
   :ensure t)
-
-(set-language-environment 'UTF-8)
-(prefer-coding-system 'utf-8)
-
-(if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
-(if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
-(if (fboundp 'set-file-name-coding-system)
-    (set-file-name-coding-system 'utf-8))
 
 (setq auto-save-file-name-transforms `((".*" ,temporary-file-directory t))
       backup-directory-alist `((".*" . ,temporary-file-directory))
