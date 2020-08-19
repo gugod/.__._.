@@ -116,7 +116,10 @@
             (emms-default-players)))
 
 (use-package multi-term
-  :ensure t)
+  :ensure t
+  :bind (:map term-raw-map
+              ("H-{" . multi-term-prev)
+              ("H-}" . multi-term-next)))
 
 (set-language-environment 'UTF-8)
 (prefer-coding-system 'utf-8)
