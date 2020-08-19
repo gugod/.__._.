@@ -1,10 +1,9 @@
 (set-language-environment 'UTF-8)
 (prefer-coding-system 'utf-8)
 (menu-bar-mode -1)
-(if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
-(if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
-(if (fboundp 'set-file-name-coding-system)
-    (set-file-name-coding-system 'utf-8))
+(scroll-bar-mode -1)
+(tool-bar-mode -1)
+(set-file-name-coding-system 'utf-8)
 
 ;; Setup `use-package'
 (unless (package-installed-p 'use-package)
