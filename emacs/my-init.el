@@ -122,11 +122,8 @@
             (emms-all)
             (emms-default-players)))
 
-(use-package multi-term
-  :ensure t
-  :bind (:map term-raw-map
-              ("H-{" . multi-term-prev)
-              ("H-}" . multi-term-next)))
+(use-package vterm
+  :ensure t)
 
 (require 'uniquify)
 
