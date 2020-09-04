@@ -106,9 +106,9 @@
 
 (use-package emms)
 
-(use-package feebleline
+(use-package hide-mode-line
   :ensure t
-  :config (feebleline-mode 1))
+  :config (hide-mode-line-mode))
 
 (use-package markdown-mode)
 
@@ -148,6 +148,8 @@
 (setq-default indent-tabs-mode nil)
 
 (global-set-key (kbd "M-z") 'zap-up-to-char)
+(global-set-key (kbd "H-{") 'previous-buffer)
+(global-set-key (kbd "H-}") 'next-buffer)
 
 (show-paren-mode t)
 (auto-image-file-mode)
