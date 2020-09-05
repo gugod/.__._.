@@ -24,97 +24,91 @@
 
 (require 'use-package)
 
-(let ((use-package-always-ensure t))
-  (progn
-    (use-package raku-mode)
-    (use-package rust-mode)
-    ;;; (use-package markdown-mode)
+(setq use-package-always-ensure t)
 
-    (use-package rg
-      :bind ("C-#" . rg-dwim))
+(use-package raku-mode)
+(use-package rust-mode)
+(use-package ivy)
+(use-package try)
+(use-package vterm)
+(use-package flycheck)
 
-    (use-package ws-butler
-      :config (ws-butler-global-mode t))
+(use-package rg
+  :bind ("C-#" . rg-dwim))
 
-    (use-package ace-jump-mode
-      :bind ("C-c SPC" . ace-jump-mode))
+(use-package ws-butler
+  :config (ws-butler-global-mode t))
 
-    (use-package yasnippet
-      :diminish yas-minor-mode
-      :hook (after-init . yas-global-mode)
-      :config (use-package yasnippet-snippets))
+(use-package ace-jump-mode
+  :bind ("C-c SPC" . ace-jump-mode))
 
-    (use-package ivy)
+(use-package yasnippet
+  :diminish yas-minor-mode
+  :hook (after-init . yas-global-mode)
+  :config (use-package yasnippet-snippets))
 
-    (use-package dumb-jump
-      :config (dumb-jump-mode)
-      :bind (("C-M-g" . dumb-jump-go))
-      :custom (dumb-jump-selector 'ivy))
+(use-package dumb-jump
+  :config (dumb-jump-mode)
+  :bind (("C-M-g" . dumb-jump-go))
+  :custom (dumb-jump-selector 'ivy))
 
-    (use-package multiple-cursors
-      :bind (("C-S-c C-S-c" . mc/edit-lines)
-             ("C-S-c C-a" .   mc/edit-beginning-of-lines)
-             ("C-S-c C-e" .   mc/edit-ends-of-lines)
-             ("C-S-c M-\"" .  mc/mark-all-like-this)))
+(use-package multiple-cursors
+  :bind (("C-S-c C-S-c" . mc/edit-lines)
+         ("C-S-c C-a" .   mc/edit-beginning-of-lines)
+         ("C-S-c C-e" .   mc/edit-ends-of-lines)
+         ("C-S-c M-\"" .  mc/mark-all-like-this)))
 
-    (use-package editorconfig
-      :config
-      (editorconfig-mode 1))
+(use-package editorconfig
+  :config
+  (editorconfig-mode 1))
 
-    (use-package multiple-cursors
-      :bind (("M-\"" . mc/mark-all-like-this)
-             ("C-S-c C-S-c" . mc/edit-lines)
-             ("C-S-c C-e" . mc/edit-ends-of-lines)
-             ("C-S-c C-a" . mc/edit-beginnings-of-lines)))
+(use-package multiple-cursors
+  :bind (("M-\"" . mc/mark-all-like-this)
+         ("C-S-c C-S-c" . mc/edit-lines)
+         ("C-S-c C-e" . mc/edit-ends-of-lines)
+         ("C-S-c C-a" . mc/edit-beginnings-of-lines)))
 
-    (use-package magit
-      :bind (("C-x g" . magit-status)))
+(use-package magit
+  :bind (("C-x g" . magit-status)))
 
-    (use-package expand-region
-      :bind ("C-c C-SPC" . er/expand-region))
+(use-package expand-region
+  :bind ("C-c C-SPC" . er/expand-region))
 
-    (use-package find-file-in-project
-      :config (setq ffip-use-rust-fd t)
-      :bind ("C-c f" . ffip))
+(use-package find-file-in-project
+  :config (setq ffip-use-rust-fd t)
+  :bind ("C-c f" . ffip))
 
-    (use-package try)
+(use-package nov
+  :config
+  (add-to-list 'auto-mode-alist '("\\.epub\\'" . nov-mode)))
 
-    (use-package nov
-      :config
-      (add-to-list 'auto-mode-alist '("\\.epub\\'" . nov-mode)))
+(use-package elfeed
+  :bind ((:map elfeed-show-mode-map
+               ("E" . my/elfeed-enqueue-link-to-mpv-playlist))
+         (:map elfeed-search-mode-map
+               ("w" . elfeed-show-yank)
+               ("E" . my/elfeed-enqueue-link-to-mpv-playlist)
+               ("H-k" . my/elfeed-mark-all-as-read)))
+  :custom ((elfeed-search-filter "@1-day +unread")
+	   (elfeed-db-directory "~/.emacs.d/elfeed")))
 
-    (use-package elfeed
-      :bind ((:map elfeed-show-mode-map
-                   ("E" . my/elfeed-enqueue-link-to-mpv-playlist))
-             (:map elfeed-search-mode-map
-                   ("w" . elfeed-show-yank)
-                   ("E" . my/elfeed-enqueue-link-to-mpv-playlist)
-                   ("H-k" . my/elfeed-mark-all-as-read)))
-      :custom ((elfeed-search-filter "@1-day +unread")
-	       (elfeed-db-directory "~/.emacs.d/elfeed")))
+(use-package elfeed-org
+  :config (elfeed-org))
 
-    (use-package elfeed-org
-      :config (elfeed-org))
+(use-package elfeed-score
+  :config (progn
+            (elfeed-score-enable)
+            (define-key elfeed-search-mode-map "=" elfeed-score-map)))
 
-    (use-package elfeed-score
-      :config (progn
-                (elfeed-score-enable)
-                (define-key elfeed-search-mode-map "=" elfeed-score-map)))
+(use-package feebleline
+  :config (feebleline-mode))
 
-    (use-package feebleline
-      :config (feebleline-mode))
+(use-package emms
+  :config (progn
+            (require 'emms-setup)
+            (emms-all)
+            (emms-default-players)))
 
-    (use-package emms
-      :config (progn
-                (require 'emms-setup)
-                (emms-all)
-                (emms-default-players)))
-
-    (use-package vterm)
-
-    ))
-
-(require 'flycheck)
 (require 'uniquify)
 
 (set-language-environment 'UTF-8)
