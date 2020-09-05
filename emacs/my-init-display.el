@@ -1,6 +1,8 @@
 (when (and (eq system-type 'darwin) (display-graphic-p))
   (set-fontset-font t 'kana (font-spec :name "MotoyaLMaru"))
   (set-fontset-font t 'han (font-spec :family "jf-openhuninn-1.1"))
+  (set-fontset-font t 'han (font-spec :family "Yuanti TC") nil 'append)
+  (set-fontset-font t 'han (font-spec :family "Yuanti SC") nil 'append)
   (set-fontset-font t 'bopomofo (font-spec :family "jf-openhuninn-1.1"))
   (set-fontset-font t 'cjk-misc (font-spec :family "jf-openhuninn-1.1"))
   (set-fontset-font t 'symbol (font-spec :name "Symbola") nil 'append)
@@ -8,6 +10,8 @@
 
 (setq face-font-rescale-alist
       '(("jf-openhuninn-1.1" . 1.2)
+        ("Yuanti TC" . 1.2)
+        ("Yuanti SC" . 1.2)
         ("-cdac$" . 1.3)))
 
 ;; Disable Theme BG color in terminal
