@@ -109,6 +109,9 @@
             (emms-all)
             (emms-default-players)))
 
+(if IS-MAC
+    (use-package osx-dictionary))
+
 (require 'uniquify)
 
 (set-language-environment 'UTF-8)
