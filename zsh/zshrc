@@ -1,3 +1,21 @@
+alias g=git
+alias sha256-digest='openssl dgst -sha256'
+alias json_prettify='json_pp --json_opt pretty,canonical'
+
+alias w3m='w3m -I UTF8 -O UTF8 -no-graph'
+alias w3m-twitter='w3m -cookie -no-graph -I UTF8 -O UTF8 https://mobile.twitter.com'
+
+alias bgm-lofi-1='mpv --vo=null --ytdl-format=worst https://youtu.be/5qap5aO4i9A'
+alias bgm-lofi-2='mpv --vo=null --ytdl-format=worst https://youtu.be/QPY3u5mhwuo'
+alias bgm-lofi-3='mpv --vo=null --ytdl-format=worst https://youtu.be/VN0WDA8sh4s'
+
+if [[ -f "${HOME}/perl5/perlbrew/bin/perlbrew" ]]; then
+    echo '# perlbrew'
+    eval "$(${HOME}/perl5/perlbrew/bin/perlbrew init-in-bash)"
+    perlbrew use
+    echo
+fi
+
 if [[ "$INSIDE_EMACS" == "vterm" ]]; then
     vterm_printf(){
         if [ -n "$TMUX" ]; then
