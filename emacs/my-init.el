@@ -32,6 +32,8 @@
 (use-package try)
 (use-package vterm)
 (use-package flycheck)
+(use-package org-roam)
+(use-package erc)
 
 (use-package rg
   :bind ("C-#" . rg-dwim))
