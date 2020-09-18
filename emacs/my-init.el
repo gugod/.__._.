@@ -102,9 +102,6 @@
             (elfeed-score-enable)
             (define-key elfeed-search-mode-map "=" elfeed-score-map)))
 
-(use-package feebleline
-  :config (feebleline-mode))
-
 (use-package emms
   :config (progn
             (require 'emms-setup)

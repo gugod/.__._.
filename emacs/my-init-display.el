@@ -25,4 +25,10 @@
 (add-hook 'after-make-frame-functions 'my/set-background-for-terminal)
 (add-hook 'window-setup-hook 'my/set-background-for-terminal)
 
+;; Remove mode-line, but keep a border line at bottom of each window.
+(setq window-divider-default-bottom-width 1
+        window-divider-default-places (quote bottom-only))
+(window-divider-mode 1)
+(setq-default mode-line-format nil)
+
 (provide 'my-init-display)
