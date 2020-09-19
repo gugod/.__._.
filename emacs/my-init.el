@@ -3,15 +3,12 @@
   (package-refresh-contents)
   (package-install 'use-package))
 
-(defconst IS-MAC (eq system-type 'darwin))
-
-(if IS-MAC
+(if (file-directory-p "/usr/local/bin")
     (progn
-      (setq initial-frame-alist '((ns-appearance . "dark") (ns-transparent-titlebar . t))
-            mac-option-modifier 'meta
-            mac-command-modifier 'hyper)
-      (add-to-list 'exec-path "/usr/local/bin")
-      (setenv "PATH" (concat "/usr/local/bin" ":" (getenv "PATH")))))
+      (if (not (member "/usr/local/bin" exec-path))
+          (add-to-list 'exec-path "/usr/local/bin"))
+      (if (not (string-match "/usr/local/bin" (getenv "PATH")))
+          (setenv "PATH" (concat "/usr/local/bin" ":" (getenv "PATH"))))))
 
 (let ((d (concat (getenv "HOME") "/.emacs.d/extra")))
   (if (file-exists-p d)
@@ -108,9 +105,6 @@
             (emms-all)
             (emms-default-players)))
 
-(if IS-MAC
-    (use-package osx-dictionary))
-
 (require 'uniquify)
 
 (set-language-environment 'UTF-8)
@@ -129,7 +123,6 @@
       uniquify-buffer-name-style 'forward
       cursor-type 'box
       default-tab-width 8
-      delete-by-moving-to-trash IS-MAC
       font-lock-maximum-decoration t
       frame-resize-pixelwise t
       frame-title-format "%b"
@@ -164,6 +157,9 @@
                   (if title
                       (rename-buffer (concat "[eww] " title) t)
                     (rename-buffer "eww" t)))))))
+
+(if (eq system-type 'darwin)
+    (require 'my-ini-mac))
 
 ;; (add-hook 'prog-mode-hook (lambda () (setq mode-line-format nil)))
 
