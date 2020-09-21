@@ -159,7 +159,7 @@
                     (rename-buffer "eww" t)))))))
 
 (if (eq system-type 'darwin)
-    (require 'my-ini-mac))
+    (require 'my-init-mac))
 
 ;; (add-hook 'prog-mode-hook (lambda () (setq mode-line-format nil)))
 
