@@ -7,13 +7,13 @@
   (set-fontset-font t 'bopomofo (font-spec :family "jf-openhuninn-1.1"))
   (set-fontset-font t 'cjk-misc (font-spec :family "jf-openhuninn-1.1"))
   (set-fontset-font t 'symbol (font-spec :name "Symbola") nil 'append)
-  (set-face-attribute 'default nil :height 200 :family "DM Mono"))
+  (set-face-attribute 'default nil :height 240 :family "Input Mono"))
 
 (setq face-font-rescale-alist
-      '(("jf-openhuninn-1.1" . 1.2)
-        ("Yuanti TC" . 1.2)
-        ("Yuanti SC" . 1.2)
-        ("-cdac$" . 1.3)))
+      '(("jf-openhuninn-1.1" . 1.1)
+        ("Yuanti TC" . 1.1)
+        ("Yuanti SC" . 1.1)))
+        ;; ("-cdac$" . 1.3)))
 
 ;; Disable Theme BG color in terminal
 ;; https://stackoverflow.com/questions/19054228/emacs-disable-theme-background-color-in-terminal
@@ -30,5 +30,7 @@
       window-divider-default-places 'bottom-only)
 (window-divider-mode t)
 (setq-default mode-line-format nil)
+
+; (setq-default frame-title-format "%b")
 
 (provide 'my-init-display)
