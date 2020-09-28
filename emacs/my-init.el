@@ -23,6 +23,7 @@
 
 (setq use-package-always-ensure t)
 
+(use-package kotlin-mode)
 (use-package raku-mode)
 (use-package rust-mode)
 (use-package ivy)
@@ -139,6 +140,7 @@
 (global-set-key (kbd "M-z") 'zap-up-to-char)
 (global-set-key (kbd "H-{") 'previous-buffer)
 (global-set-key (kbd "H-}") 'next-buffer)
+(global-set-key (kbd "C-x C-1") 'my/vterm-find-or-create)
 
 (require 'my-init-gpg)
 (require 'my-init-mail)
