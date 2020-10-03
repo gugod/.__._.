@@ -1,3 +1,18 @@
+(defun my/markdown-update-front-matter ()
+  (interactive)
+  ;;; Ignore the buffer without front matter
+  (save-excursion
+    (beginning-of-buffer)
+    (if (string= "---\n" (thing-at-point 'line))
+        (progn
+          (goto-char 4)
+          (let '(end-of-front-matter (search-forward "---\n"))
+            (goto-char 4)
+            (if (search-forward "updated_at: " end-of-front-matter t)
+                (progn
+                  (kill-line)
+                  (insert (format-time-string "%Y-%m-%dT%T%z")))))))))
+
 (defun my/vterm-find-or-create ()
   (interactive)
   (let '(buf (get-buffer "vterm"))
