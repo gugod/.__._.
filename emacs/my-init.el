@@ -32,6 +32,7 @@
 (use-package flycheck)
 (use-package org-roam)
 (use-package erc)
+(use-package markdown-mode)
 
 (use-package rg
   :bind ("C-#" . rg-dwim))
