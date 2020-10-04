@@ -1,39 +1,3 @@
-(defun my/markdown-update-front-matter ()
-  (interactive)
-  ;;; Ignore the buffer without front matter
-  (save-excursion
-    (beginning-of-buffer)
-    (if (string= "---\n" (thing-at-point 'line))
-        (progn
-          (goto-char 4)
-          (let '(end-of-front-matter (search-forward "---\n"))
-            (goto-char 4)
-            (if (search-forward "updated_at: " end-of-front-matter t)
-                (progn
-                  (kill-line)
-                  (insert (format-time-string "%Y-%m-%dT%T%z")))))))))
-
-(defun my/vterm-find-or-create ()
-  (interactive)
-  (let '(buf (get-buffer "vterm"))
-    (if buf (switch-to-buffer buf)
-        (vterm))))
-
-(defun my/enqueue-mpv-playlist (url)
-  (write-region (concat url "\n") nil "~/var/mpv-playlist" t nil "~/var/mpv-playlist.lock"))
-
-(defun browse-url-vlc (url &rest args)
-  "Open the given url with vlc (assume vlc knows how to handles it)"
-  (apply #'start-process (concat "vlc " url) nil "vlc" (list url)))
-
-(defun browse-url-mpv (url &rest args)
-  "Open the given url with mpv (assume mpv knows how to handles it)"
-  (apply #'start-process
-         (concat "mpv " url)
-         (get-buffer-create "*mpv*")
-         "mpv"
-         (list "--ytdl-format=best[height<=720]" "--force-window" url)))
-
 (defun insert-time ()
   (interactive)
   (insert (format-time-string "%Y-%m-%dT%T%z")))
@@ -129,6 +93,18 @@
     (set-face-attribute 'show-paren-match    f nil :weight "bold")
   ))
 
+(defun browse-url-vlc (url &rest args)
+  "Open the given url with vlc (assume vlc knows how to handles it)"
+  (apply #'start-process (concat "vlc " url) nil "vlc" (list url)))
+
+(defun browse-url-mpv (url &rest args)
+  "Open the given url with mpv (assume mpv knows how to handles it)"
+  (apply #'start-process
+         (concat "mpv " url)
+         (get-buffer-create "*mpv*")
+         "mpv"
+         (list "--ytdl-format=best[height<=720]" "--force-window" url)))
+
 (defun my/elfeed-mark-all-as-read ()
   (interactive)
   (mark-whole-buffer)
@@ -140,5 +116,29 @@
                          (elfeed-search-selected :ignore-region))))
   (let ((link (elfeed-entry-link entry)))
     (my/enqueue-mpv-playlist link)))
+
+(defun my/markdown-update-front-matter ()
+  (interactive)
+  ;;; Ignore the buffer without front matter
+  (save-excursion
+    (beginning-of-buffer)
+    (if (string= "---\n" (thing-at-point 'line))
+        (progn
+          (goto-char 4)
+          (let '(end-of-front-matter (search-forward "---\n"))
+            (goto-char 4)
+            (if (search-forward "updated_at: " end-of-front-matter t)
+                (progn
+                  (kill-line)
+                  (insert (format-time-string "%Y-%m-%dT%T%z")))))))))
+
+(defun my/vterm-find-or-create ()
+  (interactive)
+  (let '(buf (get-buffer "vterm"))
+    (if buf (switch-to-buffer buf)
+        (vterm))))
+
+(defun my/enqueue-mpv-playlist (url)
+  (write-region (concat url "\n") nil "~/var/mpv-playlist" t nil "~/var/mpv-playlist.lock"))
 
 (provide 'my-fun)
