@@ -51,9 +51,8 @@
       "label": "L"
     },
     {
-      "keyCode": 49173,
-      "label": "A",
-      "extraLabel": "CTRL/"
+      "keyCode": 4,
+      "label": "A"
     },
     {
       "keyCode": 18,
@@ -98,9 +97,8 @@
       "label": "N"
     },
     {
-      "keyCode": 49191,
-      "label": "S",
-      "extraLabel": "CTRL/"
+      "keyCode": 22,
+      "label": "S"
     },
     {
       "keyCode": 49476,
@@ -124,14 +122,14 @@
       "label": "X"
     },
     {
-      "keyCode": 17411,
-      "label": "3",
-      "extraLabel": "LockTo"
+      "keyCode": 65535,
+      "label": "",
+      "verbose": "Transparent"
     },
     {
-      "keyCode": 17410,
-      "label": "2",
-      "extraLabel": "LockTo"
+      "keyCode": 65535,
+      "label": "",
+      "verbose": "Transparent"
     },
     {
       "keyCode": 5,
@@ -159,31 +157,18 @@
       "label": "Esc"
     },
     {
-      "keyCode": 226,
-      "label": "LAlt",
-      "verbose": "Left Alt"
+      "keyCode": 49730,
+      "label": "\\",
+      "extraLabel": "ALT/"
     },
     {
-      "keyCode": 45,
-      "label": "-"
+      "keyCode": 53,
+      "label": "`"
     },
     {
-      "keyCode": 46,
-      "label": "="
-    },
-    {
-      "keyCode": 51518,
-      "label": "Space",
+      "keyCode": 51517,
+      "label": "Tab",
       "extraLabel": "L#1/"
-    },
-    {
-      "keyCode": 43,
-      "label": "Tab"
-    },
-    {
-      "keyCode": 42,
-      "label": "Bksp",
-      "verbose": "Backspace"
     },
     {
       "keyCode": 49981,
@@ -191,17 +176,33 @@
       "extraLabel": "GUI/"
     },
     {
-      "keyCode": 56,
-      "label": "/"
+      "keyCode": 224,
+      "label": "LCtrl",
+      "verbose": "Left Control"
     },
     {
-      "keyCode": 49,
-      "label": "\\"
+      "keyCode": 226,
+      "label": "LAlt",
+      "verbose": "Left Alt"
     },
     {
-      "keyCode": 230,
-      "label": "RAlt",
-      "verbose": "AltGr (Right Alt)"
+      "keyCode": 49979,
+      "label": "Bksp",
+      "extraLabel": "GUI/"
+    },
+    {
+      "keyCode": 51520,
+      "label": "=",
+      "extraLabel": "L#1/"
+    },
+    {
+      "keyCode": 45,
+      "label": "-"
+    },
+    {
+      "keyCode": 50761,
+      "label": "/",
+      "extraLabel": "ALTGR/"
     },
     {
       "keyCode": 40,
