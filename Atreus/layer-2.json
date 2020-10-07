@@ -17,13 +17,13 @@
       "extraLabel": "M. Btn"
     },
     {
-      "keyCode": 20548,
-      "label": "Middle",
+      "keyCode": 20545,
+      "label": "Left",
       "extraLabel": "M. Btn"
     },
     {
-      "keyCode": 20545,
-      "label": "Left",
+      "keyCode": 20548,
+      "label": "Middle",
       "extraLabel": "M. Btn"
     },
     {
@@ -37,13 +37,13 @@
       "verbose": "Transparent"
     },
     {
-      "keyCode": 20545,
-      "label": "Left",
-      "extraLabel": "M. Btn"
+      "keyCode": 20552,
+      "label": "Back",
+      "extraLabel": "M.Btn"
     },
     {
-      "keyCode": 20548,
-      "label": "Middle",
+      "keyCode": 20545,
+      "label": "Left",
       "extraLabel": "M. Btn"
     },
     {
@@ -52,10 +52,10 @@
       "extraLabel": "M. Btn"
     },
     {
-      "keyCode": 20517,
-      "label": "NW",
+      "keyCode": 20521,
+      "label": "NE",
       "extraLabel": "M. Warp",
-      "verbose": "North-West"
+      "verbose": "North-East"
     },
     {
       "keyCode": 65535,
