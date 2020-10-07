@@ -50,8 +50,7 @@
   :config (use-package yasnippet-snippets))
 
 (use-package dumb-jump
-  :config (dumb-jump-mode)
-  :bind (("C-M-g" . dumb-jump-go))
+  :config (add-hook 'xref-backend-functions #'dumb-jump-xref-activate)
   :custom (dumb-jump-selector 'ivy))
 
 (use-package multiple-cursors
