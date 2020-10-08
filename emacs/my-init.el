@@ -142,6 +142,8 @@
 (global-set-key (kbd "H-{") 'previous-buffer)
 (global-set-key (kbd "H-}") 'next-buffer)
 (global-set-key (kbd "C-x C-1") 'my/vterm-find-or-create)
+(global-set-key (kbd "C-x ,") 'delete-other-windows)
+(global-set-key (kbd "C-x C-,") 'my/vterm-find-or-create)
 
 (require 'my-init-gpg)
 (require 'my-init-mail)
