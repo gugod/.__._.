@@ -51,8 +51,9 @@
       "label": "L"
     },
     {
-      "keyCode": 4,
-      "label": "A"
+      "keyCode": 49173,
+      "label": "A",
+      "extraLabel": "CTRL/"
     },
     {
       "keyCode": 18,
@@ -97,8 +98,9 @@
       "label": "N"
     },
     {
-      "keyCode": 22,
-      "label": "S"
+      "keyCode": 49191,
+      "label": "S",
+      "extraLabel": "CTRL/"
     },
     {
       "keyCode": 49476,
@@ -122,14 +124,13 @@
       "label": "X"
     },
     {
-      "keyCode": 65535,
-      "label": "",
-      "verbose": "Transparent"
+      "keyCode": 43,
+      "label": "Tab"
     },
     {
-      "keyCode": 65535,
-      "label": "",
-      "verbose": "Transparent"
+      "keyCode": 42,
+      "label": "Bksp",
+      "verbose": "Backspace"
     },
     {
       "keyCode": 5,
@@ -153,27 +154,27 @@
       "extraLabel": "SHIFT/"
     },
     {
-      "keyCode": 41,
-      "label": "Esc"
+      "keyCode": 49978,
+      "label": "Esc",
+      "extraLabel": "GUI/"
     },
     {
-      "keyCode": 49730,
-      "label": "\\",
-      "extraLabel": "ALT/"
+      "keyCode": 226,
+      "label": "LAlt",
+      "verbose": "Left Alt"
     },
     {
       "keyCode": 53,
       "label": "`"
     },
     {
-      "keyCode": 51517,
-      "label": "Tab",
+      "keyCode": 51523,
+      "label": "\\",
       "extraLabel": "L#1/"
     },
     {
-      "keyCode": 49981,
-      "label": "Space",
-      "extraLabel": "GUI/"
+      "keyCode": 44,
+      "label": "Space"
     },
     {
       "keyCode": 224,
@@ -186,18 +187,17 @@
       "verbose": "Left Alt"
     },
     {
-      "keyCode": 49979,
-      "label": "Bksp",
-      "extraLabel": "GUI/"
+      "keyCode": 44,
+      "label": "Space"
     },
     {
-      "keyCode": 51520,
-      "label": "=",
+      "keyCode": 51519,
+      "label": "-",
       "extraLabel": "L#1/"
     },
     {
-      "keyCode": 45,
-      "label": "-"
+      "keyCode": 46,
+      "label": "="
     },
     {
       "keyCode": 50761,
@@ -205,8 +205,9 @@
       "extraLabel": "ALTGR/"
     },
     {
-      "keyCode": 40,
-      "label": "Enter"
+      "keyCode": 49977,
+      "label": "Enter",
+      "extraLabel": "GUI/"
     }
   ],
   "palette": []
