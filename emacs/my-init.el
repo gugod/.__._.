@@ -24,7 +24,10 @@
 (setq use-package-always-ensure t)
 
 (use-package kotlin-mode)
-(use-package raku-mode)
+
+(use-package raku-mode
+  :config (add-hook 'raku-mode-hook 'electric-pair-mode))
+
 (use-package rust-mode)
 (use-package ivy)
 (use-package try)
