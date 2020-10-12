@@ -39,4 +39,5 @@ fi
 
 if [[ "$TERM" == "dumb" ]]; then
    export PAGER=more
+   export PROMPT='%~'$'\n# '
 fi
