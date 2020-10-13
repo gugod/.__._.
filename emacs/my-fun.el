@@ -152,4 +152,9 @@
 (defun my/enqueue-mpv-playlist (url)
   (write-region (concat url "\n") nil "~/var/mpv-playlist" t nil "~/var/mpv-playlist.lock"))
 
+(defun my/insert-semicolon-at-the-end ()
+  (interactive)
+  (end-of-line)
+  (insert ";"))
+
 (provide 'my-fun)

@@ -26,7 +26,7 @@
 (use-package kotlin-mode)
 
 (use-package raku-mode
-  :config (add-hook 'raku-mode-hook 'electric-pair-mode))
+  :bind ("C-c C-;" . my/insert-semicolon-at-the-end))
 
 (use-package rust-mode)
 (use-package ivy)
