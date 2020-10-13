@@ -171,6 +171,8 @@
 
 ;; (add-hook 'prog-mode-hook (lambda () (setq mode-line-format nil)))
 
+(electric-pair-mode)
+
 ;; put custom-file in
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file)
