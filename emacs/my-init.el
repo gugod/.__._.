@@ -110,6 +110,12 @@
             (emms-all)
             (emms-default-players)))
 
+(use-package helm
+  :config (progn
+            (require 'helm)
+            (require 'helm-config)
+            (helm-mode 1)))
+
 (require 'uniquify)
 
 (set-language-environment 'UTF-8)
