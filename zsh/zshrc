@@ -2,6 +2,8 @@ alias g=git
 alias sha256-digest='openssl dgst -sha256'
 alias json_prettify='json_pp --json_opt pretty,canonical'
 
+alias ev='(f=$(mktemp) ; cat > $f; emacsclient -n $f)'
+
 alias w3m='w3m -I UTF8 -O UTF8 -no-graph'
 alias w3m-twitter='w3m -cookie -no-graph -I UTF8 -O UTF8 https://mobile.twitter.com'
 
