@@ -24,6 +24,7 @@
 (setq use-package-always-ensure t)
 
 (use-package kotlin-mode)
+(use-package elm-mode)
 
 (use-package raku-mode
   :bind ("C-c C-;" . my/insert-semicolon-at-the-end))
