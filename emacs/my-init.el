@@ -120,6 +120,9 @@
             (global-set-key (kbd "C-x C-f") 'helm-find-files)
             ))
 
+(use-package unicode-fonts
+  :config (progn (require 'unicode-fonts) (unicode-fonts-setup)))
+
 (require 'uniquify)
 
 (set-language-environment 'UTF-8)
