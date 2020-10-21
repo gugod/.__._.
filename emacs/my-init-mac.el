@@ -8,6 +8,12 @@
 (add-to-list 'auth-sources 'macos-keychain-internet t)
 (add-to-list 'auth-sources 'macos-keychain-generic t)
 
+(if (display-graphic-p)
+    (progn
+      (server-start)
+      (global-unset-key (kbd "C-z"))
+      (global-unset-key (kbd "C-x C-z"))))
+
 (use-package osx-dictionary)
 
 (menu-bar-mode 1)
