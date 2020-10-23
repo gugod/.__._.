@@ -51,9 +51,8 @@
       "label": "L"
     },
     {
-      "keyCode": 49173,
-      "label": "A",
-      "extraLabel": "CTRL/"
+      "keyCode": 4,
+      "label": "A"
     },
     {
       "keyCode": 18,
@@ -98,14 +97,12 @@
       "label": "N"
     },
     {
-      "keyCode": 49191,
-      "label": "S",
-      "extraLabel": "CTRL/"
+      "keyCode": 22,
+      "label": "S"
     },
     {
-      "keyCode": 49476,
-      "label": ";",
-      "extraLabel": "SHIFT/"
+      "keyCode": 51,
+      "label": ";"
     },
     {
       "keyCode": 20,
@@ -124,8 +121,8 @@
       "label": "X"
     },
     {
-      "keyCode": 43,
-      "label": "Tab"
+      "keyCode": 41,
+      "label": "Esc"
     },
     {
       "keyCode": 42,
@@ -149,28 +146,27 @@
       "label": "V"
     },
     {
-      "keyCode": 49454,
-      "label": "Z",
-      "extraLabel": "SHIFT/"
+      "keyCode": 29,
+      "label": "Z"
     },
     {
-      "keyCode": 49978,
-      "label": "Esc",
-      "extraLabel": "GUI/"
-    },
-    {
-      "keyCode": 226,
-      "label": "LAlt",
-      "verbose": "Left Alt"
+      "keyCode": 225,
+      "label": "LShift",
+      "verbose": "Left Shift"
     },
     {
       "keyCode": 53,
       "label": "`"
     },
     {
-      "keyCode": 51523,
-      "label": "\\",
-      "extraLabel": "L#1/"
+      "keyCode": 227,
+      "label": "LCmd",
+      "verbose": "Left Cmd"
+    },
+    {
+      "keyCode": 17452,
+      "label": "2",
+      "extraLabel": "ShiftTo"
     },
     {
       "keyCode": 44,
@@ -182,32 +178,31 @@
       "verbose": "Left Control"
     },
     {
+      "keyCode": 43,
+      "label": "Tab"
+    },
+    {
       "keyCode": 226,
       "label": "LAlt",
       "verbose": "Left Alt"
     },
     {
-      "keyCode": 44,
-      "label": "Space"
-    },
-    {
-      "keyCode": 51519,
-      "label": "-",
-      "extraLabel": "L#1/"
+      "keyCode": 17451,
+      "label": "1",
+      "extraLabel": "ShiftTo"
     },
     {
       "keyCode": 46,
       "label": "="
     },
     {
-      "keyCode": 50761,
-      "label": "/",
-      "extraLabel": "ALTGR/"
+      "keyCode": 56,
+      "label": "/"
     },
     {
-      "keyCode": 49977,
+      "keyCode": 49465,
       "label": "Enter",
-      "extraLabel": "GUI/"
+      "extraLabel": "SHIFT/"
     }
   ],
   "palette": []

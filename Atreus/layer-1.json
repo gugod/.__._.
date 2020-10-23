@@ -61,24 +61,16 @@
       "extraLabel": ")"
     },
     {
-      "keyCode": 2078,
-      "label": "!"
+      "keyCode": 53,
+      "label": "`"
     },
     {
-      "keyCode": 2079,
-      "label": "@"
+      "keyCode": 2102,
+      "label": "<"
     },
     {
-      "keyCode": 2080,
-      "label": "#"
-    },
-    {
-      "keyCode": 2081,
-      "label": "$"
-    },
-    {
-      "keyCode": 2082,
-      "label": "%"
+      "keyCode": 2103,
+      "label": ">"
     },
     {
       "keyCode": 65535,
@@ -91,16 +83,41 @@
       "verbose": "Transparent"
     },
     {
-      "keyCode": 2083,
-      "label": "^"
+      "keyCode": 65535,
+      "label": "",
+      "verbose": "Transparent"
     },
     {
-      "keyCode": 2084,
-      "label": "&"
+      "keyCode": 65535,
+      "label": "",
+      "verbose": "Transparent"
     },
     {
-      "keyCode": 2085,
-      "label": "*"
+      "keyCode": 2096,
+      "label": "}"
+    },
+    {
+      "keyCode": 2095,
+      "label": "{"
+    },
+    {
+      "keyCode": 65535,
+      "label": "",
+      "verbose": "Transparent"
+    },
+    {
+      "keyCode": 65535,
+      "label": "",
+      "verbose": "Transparent"
+    },
+    {
+      "keyCode": 65535,
+      "label": "",
+      "verbose": "Transparent"
+    },
+    {
+      "keyCode": 2101,
+      "label": "~"
     },
     {
       "keyCode": 2086,
@@ -111,22 +128,6 @@
       "label": ")"
     },
     {
-      "keyCode": 53,
-      "label": "`"
-    },
-    {
-      "keyCode": 2102,
-      "label": "<"
-    },
-    {
-      "keyCode": 47,
-      "label": "["
-    },
-    {
-      "keyCode": 48,
-      "label": "]"
-    },
-    {
       "keyCode": 65535,
       "label": "",
       "verbose": "Transparent"
@@ -137,8 +138,8 @@
       "verbose": "Transparent"
     },
     {
-      "keyCode": 17410,
-      "label": "2",
+      "keyCode": 17411,
+      "label": "3",
       "extraLabel": "LockTo"
     },
     {
@@ -147,36 +148,54 @@
       "verbose": "Transparent"
     },
     {
-      "keyCode": 45,
-      "label": "-"
+      "keyCode": 48,
+      "label": "]"
     },
     {
-      "keyCode": 46,
-      "label": "="
+      "keyCode": 47,
+      "label": "["
     },
     {
-      "keyCode": 56,
-      "label": "/"
+      "keyCode": 65535,
+      "label": "",
+      "verbose": "Transparent"
     },
     {
-      "keyCode": 49,
-      "label": "\\"
+      "keyCode": 65535,
+      "label": "",
+      "verbose": "Transparent"
     },
     {
-      "keyCode": 2101,
-      "label": "~"
+      "keyCode": 65535,
+      "label": "",
+      "verbose": "Transparent"
     },
     {
-      "keyCode": 2103,
-      "label": ">"
+      "keyCode": 57,
+      "label": "CapsLK",
+      "verbose": "Caps Lock"
     },
     {
-      "keyCode": 2095,
-      "label": "{"
+      "keyCode": 65535,
+      "label": "",
+      "verbose": "Transparent"
     },
     {
-      "keyCode": 2096,
-      "label": "}"
+      "keyCode": 65535,
+      "label": "",
+      "verbose": "Transparent"
+    },
+    {
+      "keyCode": 23786,
+      "label": "Vol-",
+      "extraLabel": "Media",
+      "verbose": "Volume down"
+    },
+    {
+      "keyCode": 23785,
+      "label": "Vol+",
+      "extraLabel": "Media",
+      "verbose": "Volume up"
     },
     {
       "keyCode": 65535,
@@ -199,20 +218,19 @@
       "verbose": "Transparent"
     },
     {
-      "keyCode": 2093,
-      "label": "_"
+      "keyCode": 65535,
+      "label": "",
+      "verbose": "Transparent"
     },
     {
-      "keyCode": 2094,
-      "label": "+"
+      "keyCode": 65535,
+      "label": "",
+      "verbose": "Transparent"
     },
     {
-      "keyCode": 2104,
-      "label": "?"
-    },
-    {
-      "keyCode": 2097,
-      "label": "|"
+      "keyCode": 65535,
+      "label": "",
+      "verbose": "Transparent"
     }
   ],
   "palette": []

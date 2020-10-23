@@ -1,30 +1,24 @@
 {
   "keymap": [
     {
-      "keyCode": 65535,
-      "label": "",
-      "verbose": "Transparent"
+      "keyCode": 2078,
+      "label": "!"
     },
     {
-      "keyCode": 20517,
-      "label": "NW",
-      "extraLabel": "M. Warp",
-      "verbose": "North-West"
+      "keyCode": 2079,
+      "label": "@"
     },
     {
-      "keyCode": 20546,
-      "label": "Right",
-      "extraLabel": "M. Btn"
+      "keyCode": 2080,
+      "label": "#"
     },
     {
-      "keyCode": 20545,
-      "label": "Left",
-      "extraLabel": "M. Btn"
+      "keyCode": 2081,
+      "label": "$"
     },
     {
-      "keyCode": 20548,
-      "label": "Middle",
-      "extraLabel": "M. Btn"
+      "keyCode": 2082,
+      "label": "%"
     },
     {
       "keyCode": 65535,
@@ -37,51 +31,44 @@
       "verbose": "Transparent"
     },
     {
-      "keyCode": 20552,
-      "label": "Back",
-      "extraLabel": "M.Btn"
+      "keyCode": 2083,
+      "label": "^"
     },
     {
-      "keyCode": 20545,
-      "label": "Left",
-      "extraLabel": "M. Btn"
+      "keyCode": 2084,
+      "label": "&"
     },
     {
-      "keyCode": 20546,
-      "label": "Right",
-      "extraLabel": "M. Btn"
+      "keyCode": 2085,
+      "label": "*"
     },
     {
-      "keyCode": 20521,
-      "label": "NE",
-      "extraLabel": "M. Warp",
-      "verbose": "North-East"
+      "keyCode": 2086,
+      "label": "("
     },
     {
-      "keyCode": 65535,
-      "label": "",
-      "verbose": "Transparent"
+      "keyCode": 2087,
+      "label": ")"
     },
     {
-      "keyCode": 65535,
-      "label": "",
-      "verbose": "Transparent"
+      "keyCode": 53,
+      "label": "`"
     },
     {
-      "keyCode": 20518,
-      "label": "SW",
-      "extraLabel": "M. Warp",
-      "verbose": "South-West"
+      "keyCode": 2102,
+      "label": "<"
     },
     {
-      "keyCode": 20500,
-      "label": "Left",
-      "extraLabel": "M. Wheel"
+      "keyCode": 2103,
+      "label": ">"
     },
     {
-      "keyCode": 20484,
-      "label": "Left",
-      "extraLabel": "Mouse"
+      "keyCode": 2095,
+      "label": "{"
+    },
+    {
+      "keyCode": 2096,
+      "label": "}"
     },
     {
       "keyCode": 65535,
@@ -99,30 +86,24 @@
       "verbose": "Transparent"
     },
     {
-      "keyCode": 65535,
-      "label": "",
-      "verbose": "Transparent"
+      "keyCode": 56,
+      "label": "/"
     },
     {
-      "keyCode": 20488,
-      "label": "Right",
-      "extraLabel": "Mouse"
+      "keyCode": 46,
+      "label": "="
     },
     {
-      "keyCode": 20504,
-      "label": "Right",
-      "extraLabel": "M. Wheel"
+      "keyCode": 49,
+      "label": "\\"
     },
     {
-      "keyCode": 20522,
-      "label": "SE",
-      "extraLabel": "M. Warp",
-      "verbose": "South-East"
+      "keyCode": 45,
+      "label": "-"
     },
     {
-      "keyCode": 65535,
-      "label": "",
-      "verbose": "Transparent"
+      "keyCode": 2101,
+      "label": "~"
     },
     {
       "keyCode": 65535,
@@ -135,19 +116,12 @@
       "verbose": "Transparent"
     },
     {
-      "keyCode": 20497,
-      "label": "Up",
-      "extraLabel": "M. Wheel"
+      "keyCode": 47,
+      "label": "["
     },
     {
-      "keyCode": 20481,
-      "label": "Up",
-      "extraLabel": "Mouse"
-    },
-    {
-      "keyCode": 75,
-      "label": "PgUp",
-      "verbose": "Page Up"
+      "keyCode": 48,
+      "label": "]"
     },
     {
       "keyCode": 65535,
@@ -155,43 +129,29 @@
       "verbose": "Transparent"
     },
     {
-      "keyCode": 17492,
-      "label": "0",
-      "extraLabel": "MoveTo"
+      "keyCode": 65535,
+      "label": "",
+      "verbose": "Transparent"
     },
     {
       "keyCode": 82,
       "label": "↑"
     },
     {
-      "keyCode": 20482,
-      "label": "Down",
-      "extraLabel": "Mouse"
+      "keyCode": 2104,
+      "label": "?"
     },
     {
-      "keyCode": 20498,
-      "label": "Down",
-      "extraLabel": "M. Wheel"
+      "keyCode": 2094,
+      "label": "+"
     },
     {
-      "keyCode": 65535,
-      "label": "",
-      "verbose": "Transparent"
+      "keyCode": 2097,
+      "label": "|"
     },
     {
-      "keyCode": 65535,
-      "label": "",
-      "verbose": "Transparent"
-    },
-    {
-      "keyCode": 65535,
-      "label": "",
-      "verbose": "Transparent"
-    },
-    {
-      "keyCode": 65535,
-      "label": "",
-      "verbose": "Transparent"
+      "keyCode": 2093,
+      "label": "_"
     },
     {
       "keyCode": 65535,
@@ -203,13 +163,23 @@
       "label": "Home"
     },
     {
-      "keyCode": 78,
-      "label": "PgDn",
-      "verbose": "Page Down"
-    },
-    {
       "keyCode": 77,
       "label": "End"
+    },
+    {
+      "keyCode": 65535,
+      "label": "",
+      "verbose": "Transparent"
+    },
+    {
+      "keyCode": 65535,
+      "label": "",
+      "verbose": "Transparent"
+    },
+    {
+      "keyCode": 65535,
+      "label": "",
+      "verbose": "Transparent"
     },
     {
       "keyCode": 80,
@@ -224,14 +194,14 @@
       "label": "→"
     },
     {
-      "keyCode": 65535,
-      "label": "",
-      "verbose": "Transparent"
+      "keyCode": 75,
+      "label": "PgUp",
+      "verbose": "Page Up"
     },
     {
-      "keyCode": 65535,
-      "label": "",
-      "verbose": "Transparent"
+      "keyCode": 78,
+      "label": "PgDn",
+      "verbose": "Page Down"
     },
     {
       "keyCode": 65535,
