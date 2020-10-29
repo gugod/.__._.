@@ -111,18 +111,6 @@
             (emms-all)
             (emms-default-players)))
 
-(use-package helm
-  :config (progn
-            (require 'helm)
-            (require 'helm-config)
-            (helm-mode 1)
-            (global-set-key (kbd "C-s") 'helm-occur)
-            (global-set-key (kbd "C-x C-f") 'helm-find-files)
-            ))
-
-(use-package unicode-fonts
-  :config (progn (require 'unicode-fonts) (unicode-fonts-setup)))
-
 (require 'uniquify)
 
 (set-language-environment 'UTF-8)
