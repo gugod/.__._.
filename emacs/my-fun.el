@@ -157,7 +157,7 @@
   (end-of-line)
   (insert ";"))
 
-(defun my/threaded-gnus
+(defun my/threaded-gnus ()
     (interactive)
   (make-thread #'gnus))
 
