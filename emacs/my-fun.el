@@ -143,12 +143,6 @@
        (lambda ()
          (my/markdown-update-front-matter))))
 
-(defun my/vterm-find-or-create ()
-  (interactive)
-  (let '(buf (get-buffer "vterm"))
-    (if buf (switch-to-buffer buf)
-        (vterm))))
-
 (defun my/enqueue-mpv-playlist (url)
   (write-region (concat url "\n") nil "~/var/mpv-playlist" t nil "~/var/mpv-playlist.lock"))
 

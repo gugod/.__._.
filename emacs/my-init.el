@@ -33,6 +33,7 @@
 (use-package ivy)
 (use-package try)
 (use-package vterm)
+(use-package vterm-toggle)
 (use-package flycheck)
 (use-package org-roam)
 (use-package erc)
@@ -145,9 +146,9 @@
 (global-set-key (kbd "M-z") 'zap-up-to-char)
 (global-set-key (kbd "H-{") 'previous-buffer)
 (global-set-key (kbd "H-}") 'next-buffer)
-(global-set-key (kbd "C-x C-1") 'my/vterm-find-or-create)
 (global-set-key (kbd "C-x ,") 'delete-other-windows)
-(global-set-key (kbd "C-x C-,") 'my/vterm-find-or-create)
+
+(global-set-key (kbd "H-'") 'vterm-toggle)
 
 (require 'my-init-gpg)
 (require 'my-init-mail)
