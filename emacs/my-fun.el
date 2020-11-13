@@ -155,4 +155,8 @@
     (interactive)
   (make-thread #'gnus))
 
+(defun my/fzf-in-project ()
+  (interactive)
+  (fzf/start (car (project-roots (project-current)))))
+
 (provide 'my-fun)

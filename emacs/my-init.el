@@ -80,10 +80,6 @@
 (use-package expand-region
   :bind ("C-c C-SPC" . er/expand-region))
 
-(use-package find-file-in-project
-  :config (setq ffip-use-rust-fd t)
-  :bind ("C-c f" . ffip))
-
 (use-package nov
   :config
   (add-to-list 'auto-mode-alist '("\\.epub\\'" . nov-mode)))
@@ -111,6 +107,11 @@
             (require 'emms-setup)
             (emms-all)
             (emms-default-players)))
+
+(use-package find-file-in-project
+  :bind ("C-c f" . find-file-in-project))
+
+(use-package fzf)
 
 (require 'uniquify)
 
@@ -143,13 +144,6 @@
 
 (setq-default indent-tabs-mode nil)
 
-(global-set-key (kbd "M-z") 'zap-up-to-char)
-(global-set-key (kbd "H-{") 'previous-buffer)
-(global-set-key (kbd "H-}") 'next-buffer)
-(global-set-key (kbd "C-x ,") 'delete-other-windows)
-
-(global-set-key (kbd "H-'") 'vterm-toggle)
-
 (require 'my-init-gpg)
 (require 'my-init-mail)
 (require 'my-init-display)
@@ -174,6 +168,17 @@
 ;; (add-hook 'prog-mode-hook (lambda () (setq mode-line-format nil)))
 
 (electric-pair-mode)
+
+
+;; Global keybindings
+(global-set-key (kbd "M-z") 'zap-up-to-char)
+(global-set-key (kbd "H-{") 'previous-buffer)
+(global-set-key (kbd "H-}") 'next-buffer)
+(global-set-key (kbd "C-x ,") 'delete-other-windows)
+(global-set-key (kbd "H-'") 'vterm-toggle)
+(global-set-key (kbd "C-c f") 'my/fzf-in-project)
+
+
 
 ;; put custom-file in
 (setq custom-file "~/.emacs.d/custom.el")
