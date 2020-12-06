@@ -169,7 +169,6 @@
 
 (electric-pair-mode)
 
-
 ;; Global keybindings
 (global-set-key (kbd "M-z") 'zap-up-to-char)
 (global-set-key (kbd "H-{") 'previous-buffer)
@@ -178,7 +177,6 @@
 (global-set-key (kbd "C-c f") 'my/fzf-in-project)
 (global-set-key (kbd "C-x ,") 'delete-other-windows)
 (global-set-key (kbd "C-x m") 'mu4e)
-
 
 ;; put custom-file in
 (setq custom-file "~/.emacs.d/custom.el")
