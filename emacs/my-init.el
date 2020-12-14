@@ -176,6 +176,7 @@
 (global-set-key (kbd "H-}") 'next-buffer)
 (global-set-key (kbd "H-'") 'vterm-toggle)
 (global-set-key (kbd "C-c f") 'my/fzf-in-project)
+(global-set-key (kbd "C-x m") 'mu4e)
 
 ;; These are defined on the L6 of Aterus keyboard
 (global-set-key (kbd "C-M-H-!") 'delete-other-windows)
