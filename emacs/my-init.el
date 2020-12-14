@@ -127,7 +127,6 @@
 
 (setq auto-save-file-name-transforms `((".*" ,temporary-file-directory t))
       backup-directory-alist `((".*" . ,temporary-file-directory))
-      browse-url-browser-function 'browse-url-default-macosx-browser
       uniquify-buffer-name-style 'forward
       cursor-type 'box
       default-tab-width 8
