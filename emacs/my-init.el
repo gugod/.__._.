@@ -169,16 +169,17 @@
 
 (electric-pair-mode)
 
-
 ;; Global keybindings
+(global-set-key (kbd "C-=") 'er/expand-region)
 (global-set-key (kbd "M-z") 'zap-up-to-char)
 (global-set-key (kbd "H-{") 'previous-buffer)
 (global-set-key (kbd "H-}") 'next-buffer)
-(global-set-key (kbd "C-x ,") 'delete-other-windows)
 (global-set-key (kbd "H-'") 'vterm-toggle)
 (global-set-key (kbd "C-c f") 'my/fzf-in-project)
 
-
+;; These are defined on the L6 of Aterus keyboard
+(global-set-key (kbd "C-M-H-!") 'delete-other-windows)
+(global-set-key (kbd "C-M-H-@") 'other-window)
 
 ;; put custom-file in
 (setq custom-file "~/.emacs.d/custom.el")
