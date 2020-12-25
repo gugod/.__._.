@@ -32,8 +32,12 @@
 (use-package rust-mode)
 (use-package ivy)
 (use-package try)
+
 (use-package vterm)
-(use-package vterm-toggle)
+(use-package vterm-toggle
+  :bind ("H-'" . 'vterm-toggle)
+  :custom (vterm-toogle-fullscreen-p t))
+
 (use-package flycheck)
 (use-package org-roam)
 (use-package erc)
@@ -173,7 +177,6 @@
 (global-set-key (kbd "M-z") 'zap-up-to-char)
 (global-set-key (kbd "H-{") 'previous-buffer)
 (global-set-key (kbd "H-}") 'next-buffer)
-(global-set-key (kbd "H-'") 'vterm-toggle)
 (global-set-key (kbd "C-c f") 'my/fzf-in-project)
 (global-set-key (kbd "C-x m") 'mu4e)
 
