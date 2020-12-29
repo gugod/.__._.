@@ -26,6 +26,7 @@
   (setq cperl-pod-here-scan t)
   (setq cperl-regexp-scan nil)
   (setq indent-tabs-mode nil)
+  (local-set-key (kbd "M-q") 'cperl-indent-exp)
   (local-set-key (kbd "C-c C-;") 'my/insert-semicolon-at-the-end)
   (local-set-key (kbd "<RET>") 'newline-and-indent)
   (local-set-key (kbd "C-c c") 'cperl-check-syntax)
