@@ -16,6 +16,4 @@
 
 (use-package osx-dictionary)
 
-(menu-bar-mode 1)
-
 (provide 'my-init-mac)
