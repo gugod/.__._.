@@ -31,6 +31,11 @@
   :bind ("C-c C-;" . my/insert-semicolon-at-the-end))
 
 (use-package rust-mode)
+
+(use-package flycheck
+  :hook (prog-mode . flycheck-mode))
+;; (use-package flycheck-raku)
+
 (use-package ivy)
 (use-package try)
 
@@ -39,7 +44,7 @@
   :bind ("H-'" . 'vterm-toggle)
   :custom (vterm-toogle-fullscreen-p t))
 
-(use-package flycheck)
+
 (use-package org-roam)
 (use-package erc)
 (use-package markdown-mode
