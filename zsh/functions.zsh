@@ -1,3 +1,19 @@
+function mdview() { cat $1 | go-md2man | man -l - }
+
+# Read manual pages in Preview.app
+function preman() { man -t $@ | open -f -a Preview }
+
+function watch() {
+    while true
+    do
+          clear
+          echo Command: $*
+          echo "========"
+          $*
+          sleep 5
+    done
+}
+
 function e {
     local file="$1"
 
