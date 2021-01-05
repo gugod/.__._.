@@ -1,12 +1,17 @@
-;; grey-paper-theme.l -- The "Grey paper" theme.
-;; Author: Kang-min Liu <gugod@gugod.org>
-;; Version: 1.0.0
+;;; grey-paper-theme.el --- The "Grey paper" theme.
 
-;; LICENSE: CC0
-;;   To the extent possible under law, Kang-min Liu has waived all
-;;   copyright and related or neighboring rights to
-;;   grey-paper-theme.el. This work is published from: Taiwan.
+;;; Author: Kang-min Liu <gugod@gugod.org>
+;;; Version: 1.0.0
 
+;;; LICENSE: CC0
+;;;   To the extent possible under law, Kang-min Liu has waived all
+;;;   copyright and related or neighboring rights to
+;;;   grey-paper-theme.el. This work is published from: Taiwan.
+
+;;; Commentary:
+;;;   Then intention is to make the look-and-feel somewhere similar to eink.
+
+;;; Code:
 (deftheme grey-paper
   "Grayscale like eink")
 
@@ -30,3 +35,5 @@
  )
 
 (provide-theme 'grey-paper)
+;;; grey-paper-theme.el ends here
+
