@@ -101,7 +101,7 @@
                ("w" . elfeed-show-yank)
                ("E" . my/elfeed-enqueue-link-to-mpv-playlist)
                ("H-k" . my/elfeed-mark-all-as-read)))
-  :custom ((elfeed-search-filter "@1-day +unread")
+  :custom ((elfeed-search-filter "+unread")
 	   (elfeed-db-directory "~/.emacs.d/elfeed")))
 
 (use-package elfeed-org
