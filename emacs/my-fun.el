@@ -152,11 +152,12 @@
   (insert ";"))
 
 (defun my/threaded-gnus ()
-    (interactive)
+  (interactive)
   (make-thread #'gnus))
 
 (defun my/fzf-in-project ()
+  "fzf from project root."
   (interactive)
-  (fzf/start (car (project-roots (project-current)))))
+  (fzf/start (car (project-root (project-current)))))
 
 (provide 'my-fun)
