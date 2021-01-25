@@ -158,6 +158,6 @@
 (defun my/fzf-in-project ()
   "fzf from project root."
   (interactive)
-  (fzf/start (car (project-root (project-current)))))
+  (fzf/start (project-root (project-current))))
 
 (provide 'my-fun)
