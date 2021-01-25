@@ -21,9 +21,6 @@
 
 (require 'use-package)
 
-(setq use-package-always-ensure t
-      use-package-always-defer t)
-
 (use-package kotlin-mode)
 (use-package elm-mode)
 
@@ -43,7 +40,6 @@
 (use-package vterm-toggle
   :bind ("H-'" . 'vterm-toggle)
   :custom (vterm-toogle-fullscreen-p t))
-
 
 (use-package org-roam)
 (use-package erc)
@@ -117,9 +113,6 @@
             (require 'emms-setup)
             (emms-all)
             (emms-default-players)))
-
-(use-package find-file-in-project
-  :bind ("C-c f" . find-file-in-project))
 
 (use-package fzf)
 
