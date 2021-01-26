@@ -41,7 +41,6 @@
   :bind ("H-'" . 'vterm-toggle)
   :custom (vterm-toogle-fullscreen-p t))
 
-
 (use-package org-roam)
 (use-package erc)
 (use-package markdown-mode
@@ -114,9 +113,6 @@
             (require 'emms-setup)
             (emms-all)
             (emms-default-players)))
-
-(use-package find-file-in-project
-  :bind ("C-c f" . find-file-in-project))
 
 (use-package fzf)
 
