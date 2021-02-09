@@ -120,7 +120,7 @@
 
 (set-language-environment 'UTF-8)
 (prefer-coding-system 'utf-8)
-(scroll-bar-mode -1)
+;;; (scroll-bar-mode -1)
 (tool-bar-mode -1)
 (set-file-name-coding-system 'utf-8)
 (show-paren-mode t)
