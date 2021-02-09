@@ -37,6 +37,10 @@ if [[ "$INSIDE_EMACS" == "vterm" ]]; then
     export PROMPT=$'\n\e]51;A%d\e\\# %~'$'\n''# '
 
     alias clear='vterm_printf "51;Evterm-clear-scrollback";tput clear'
+    # macOS-specific
+    alias beep='afplay /System/Library/Sounds/Submarine.aiff'
+else
+    alias beep='tput bel'
 fi
 
 if [[ "$TERM" == "dumb" ]]; then
