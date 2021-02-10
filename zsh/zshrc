@@ -3,13 +3,9 @@ alias sha256-digest='openssl dgst -sha256'
 alias json_prettify='json_pp --json_opt pretty,canonical'
 
 alias ev='(f=$(mktemp) ; cat > $f; emacsclient -n $f)'
-
+alias beep='tput bel'
 alias w3m='w3m -I UTF8 -O UTF8 -no-graph'
 alias w3m-twitter='w3m -cookie -no-graph -I UTF8 -O UTF8 https://mobile.twitter.com'
-
-alias bgm-lofi-1='mpv --vo=null --ytdl-format=worst https://youtu.be/5qap5aO4i9A'
-alias bgm-lofi-2='mpv --vo=null --ytdl-format=worst https://youtu.be/QPY3u5mhwuo'
-alias bgm-lofi-3='mpv --vo=null --ytdl-format=worst https://youtu.be/VN0WDA8sh4s'
 
 if [[ -f "${HOME}/perl5/perlbrew/bin/perlbrew" ]]; then
     echo '# perlbrew'
@@ -38,9 +34,9 @@ if [[ "$INSIDE_EMACS" == "vterm" ]]; then
 
     alias clear='vterm_printf "51;Evterm-clear-scrollback";tput clear'
     # macOS-specific
-    alias beep='afplay /System/Library/Sounds/Submarine.aiff'
-else
-    alias beep='tput bel'
+    alias beep='afplay /System/Library/Sounds/Purr.aiff'
+    alias beep-yay='afplay /System/Library/Sounds/Hero.aiff'
+    alias beep-nay='afplay /System/Library/Sounds/Purr.aiff'
 fi
 
 if [[ "$TERM" == "dumb" ]]; then
