@@ -156,6 +156,8 @@
 
 ;; Append website title to eww buffer.
 (when (fboundp 'eww)
+  (add-hook 'eww-mode-hook
+            (lambda () (visual-line-mode)))
   (add-hook 'eww-after-render-hook
             (lambda ()
               (when (eq major-mode 'eww-mode )
