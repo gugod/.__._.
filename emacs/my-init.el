@@ -120,21 +120,22 @@
 
 (set-language-environment 'UTF-8)
 (prefer-coding-system 'utf-8)
-;;; (scroll-bar-mode -1)
-(tool-bar-mode -1)
 (set-file-name-coding-system 'utf-8)
+(fset 'yes-or-no-p 'y-or-n-p)
+(tool-bar-mode 0)
+(tooltip-mode  0)
+(scroll-bar-mode 0)
 (show-paren-mode t)
 (auto-image-file-mode)
-(fset 'yes-or-no-p 'y-or-n-p)
 
 (setq auto-save-file-name-transforms `((".*" ,temporary-file-directory t))
       backup-directory-alist `((".*" . ,temporary-file-directory))
+      pop-up-window nil
       uniquify-buffer-name-style 'forward
       cursor-type 'box
       default-tab-width 8
       font-lock-maximum-decoration t
       frame-resize-pixelwise t
-      frame-title-format "%b"
       inhibit-startup-message t
       initial-scratch-message ""
       mouse-yank-at-point t
