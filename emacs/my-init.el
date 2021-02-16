@@ -124,7 +124,8 @@
 (fset 'yes-or-no-p 'y-or-n-p)
 (tool-bar-mode 0)
 (tooltip-mode  0)
-(scroll-bar-mode 0)
+(if (fboundp 'scroll-bar-mode)
+    (scroll-bar-mode 0))
 (show-paren-mode t)
 (auto-image-file-mode)
 
