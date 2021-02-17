@@ -123,6 +123,7 @@
 (fset 'yes-or-no-p 'y-or-n-p)
 (tool-bar-mode 0)
 (tooltip-mode  0)
+(blink-cursor-mode 0)
 (if (fboundp 'scroll-bar-mode)
     (scroll-bar-mode 0))
 (show-paren-mode t)
@@ -168,8 +169,6 @@
 
 (if (eq system-type 'darwin)
     (require 'my-init-mac))
-
-;; (add-hook 'prog-mode-hook (lambda () (setq mode-line-format nil)))
 
 (electric-pair-mode)
 
