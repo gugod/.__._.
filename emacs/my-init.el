@@ -41,7 +41,6 @@
   :bind ("H-'" . 'vterm-toggle)
   :custom (vterm-toogle-fullscreen-p t))
 
-(use-package org-roam)
 (use-package erc)
 (use-package markdown-mode
   :config (add-hook 'markdown-mode-hook 'my/markdown-hook))
