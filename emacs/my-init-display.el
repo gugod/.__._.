@@ -11,8 +11,8 @@
   (set-fontset-font t 'bopomofo (font-spec :family "jf-openhuninn-1.1"))
   (set-fontset-font t 'cjk-misc (font-spec :family "jf-openhuninn-1.1"))
   (set-fontset-font t 'symbol (font-spec :name "Symbola") nil 'append)
-  ;; (set-face-font 'default "Roboto Mono Light 24")
-  (set-face-attribute 'default nil :height 240 :family "NovaMono")
+  (set-face-font 'default "Roboto Mono Light 24")
+  ;; (set-face-attribute 'default nil :height 240 :family "NovaMono")
   )
 
 (setq face-font-rescale-alist
