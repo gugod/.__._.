@@ -142,6 +142,9 @@
       mouse-yank-at-point t
       scroll-conservatively 10000
       scroll-margin 2
+      completion-ignore-case t
+      read-buffer-completion-ignore-case t
+      read-file-name-completion-ignore-case t
       shr-use-fonts nil
       shr-use-colors nil)
 
