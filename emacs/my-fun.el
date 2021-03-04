@@ -123,19 +123,22 @@
     (beginning-of-buffer)
     (if (string= "---\n" (thing-at-point 'line))
         (progn
-          (goto-char 4)
           (let '(end-of-front-matter (search-forward "\n---\n"))
-            (goto-char 4)
+            (beginning-of-buffer)
+            (if (not (search-forward "published_at: " end-of-front-matter t))
+              (progn
+                (goto-char 5)
+                (open-line 1)
+                (insert "published_at: " (format-time-string "%Y-%m-%dT%T%z"))))
+            (beginning-of-buffer)
             (if (search-forward "updated_at: " end-of-front-matter t)
                 (progn
                   (kill-line)
                   (insert (format-time-string "%Y-%m-%dT%T%z")))
               (progn
-                (goto-char end-of-front-matter)
-                (previous-line)
+                (goto-char 5)
                 (open-line 1)
-                (insert "updated_at: "
-                        (format-time-string "%Y-%m-%dT%T%z")))
+                (insert "updated_at: " (format-time-string "%Y-%m-%dT%T%z")))
               ))))))
 
 (defun my/markdown-hook ()
