@@ -38,7 +38,9 @@
 
 (use-package vterm)
 (use-package vterm-toggle
-  :bind ("C-M-H-%" . 'vterm-toggle)
+  :bind
+  ("C-M-H-%" . 'vterm-toggle)
+  ("H-'" . 'vterm-toggle)
   :custom (vterm-toogle-fullscreen-p t))
 
 (use-package erc)
