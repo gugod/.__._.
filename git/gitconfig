@@ -4,6 +4,12 @@
 [pull]
 	ff = only
 
+[log]
+	decorate = short
+
+[color]
+	ui = false
+
 # non-trivial aliases
 [alias]
         m = merge --strategy-option=patience --no-ff --no-edit
