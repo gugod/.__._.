@@ -92,17 +92,17 @@
   (add-to-list 'auto-mode-alist '("\\.epub\\'" . nov-mode)))
 
 (use-package elfeed
+  :config
+  (elfeed-set-max-connections 16)
+  (elfeed-set-timeout 15)
   :bind ((:map elfeed-show-mode-map
                ("E" . my/elfeed-enqueue-link-to-mpv-playlist))
          (:map elfeed-search-mode-map
                ("w" . elfeed-show-yank)
                ("E" . my/elfeed-enqueue-link-to-mpv-playlist)
                ("H-k" . my/elfeed-mark-all-as-read)))
-  :custom ((elfeed-search-filter "+unread")
+  :custom ((elfeed-search-filter "+unread @3-days")
 	   (elfeed-db-directory "~/.emacs.d/elfeed")))
-
-(use-package elfeed-org
-  :config (elfeed-org))
 
 (use-package elfeed-score
   :config (progn
