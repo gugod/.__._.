@@ -12,18 +12,25 @@
 
 # non-trivial aliases
 [alias]
-        m = merge --strategy-option=patience --no-ff --no-edit
-        d = diff -W
-        ds = diff -W --staged
-        pusho = ! git push -u origin $(git current-branch)
-        current-branch = symbolic-ref --short HEAD
         amend = commit --amend --no-edit
-        mylog = !git log --author $(git config user.email)
+        b = branch
+        bc = branch --contains
         cmmm = commit -m '' --allow-empty-message
-        pupu = !git pull --no-ff && git push
-        l = ! git log --color --graph --format='%h [%aN] %s' --decorate --first-parent $(git merge-base HEAD master)^..HEAD
-        oldest-ancestor = !zsh -c 'diff -u <(git rev-list --first-parent "${1:-master}") <(git rev-list --first-parent "${2:-HEAD}") | sed -ne \"s/^ //p\" | head -1' -
-        detach = ! git checkout $(git rev-parse HEAD)
         current-branch = branch --show-current
-        st = status
+        current-branch = symbolic-ref --short HEAD
+        d = diff -W
+        detach = ! git checkout $(git rev-parse HEAD)
+        ds = diff -W --staged
+        l = ! git log --color --graph --format='%h [%aN] %s' --decorate --first-parent $(git merge-base HEAD master)^..HEAD
+        m = merge --strategy-option=patience --no-ff --no-edit
+        mpr = ! f() { git merge --no-ff --no-edit origin/pr/$1 }; f;
+        mylog = !git log --author $(git config user.email)
+        oldest-ancestor = !zsh -c 'diff -u <(git rev-list --first-parent "${1:-master}") <(git rev-list --first-parent "${2:-HEAD}") | sed -ne \"s/^ //p\" | head -1' -
         pupu = ! git pull --no-edit && git push
+        pupu = !git pull --no-ff && git push
+        pusho = ! git push -u origin $(git current-branch)
+        st = status
+        wip = for-each-ref --sort='authordate:iso8601' --format=' %(color:green)%(authordate:relative)%09%(color:white)%(refname:short)' refs/heads
+        xb = ! git branch | peco
+        xc = ! git checkout $(git branch | peco)
+        xm = ! git merge --no-ff --no-edit $(git branch | peco)
