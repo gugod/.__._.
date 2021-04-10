@@ -1,3 +1,16 @@
+(defun insert-pair-inner-spaces ()
+  "Insert a pair of spaces at the beginning and the end of current paren."
+  (interactive)
+  (save-mark-and-excursion
+    (progn
+      (forward-sexp)
+      (backward-char)
+      (insert-char #x20)
+      (forward-char)
+      (backward-sexp)
+      (forward-char)
+      (insert-char #x20))))
+
 (defun insert-time ()
   (interactive)
   (insert (format-time-string "%Y-%m-%dT%T%z")))

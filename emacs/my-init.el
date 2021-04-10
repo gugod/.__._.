@@ -186,7 +186,8 @@
 (global-set-key (kbd "C-c f") 'my/fzf-in-project)
 
 (if (fboundp 'mu4e)
-    (global-set-key (kbd "C-x m") 'mu4e))
+    (global-set-key (kbd "C-x m") 'mu4e)
+  (global-set-key (kbd "C-x m") 'gnus))
 
 ;; These are defined on the L6 of Aterus keyboard
 (global-set-key (kbd "C-M-H-!") 'delete-other-windows)
