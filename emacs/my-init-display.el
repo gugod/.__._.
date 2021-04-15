@@ -46,13 +46,13 @@
               '((:eval
                  (format-mode-line
                   (list
-                   (propertize "☰" 'face `(:inherit mode-line-buffer-id)
-                         'help-echo "Mode(s) menu"
-                         'mouse-face 'mode-line-highlight
-                         'local-map   mode-line-major-mode-keymap)
-                   " %b "
-                   (if (and buffer-file-name (buffer-modified-p))
-                       (propertize "(modified)" 'face `(:inherit face-faded))))))))
+                   (propertize
+                    (if buffer-file-name
+                        (if (buffer-modified-p) "◍" "●")
+                      "○")
+                    'face `(:inherit face-faded))
+                   " %b"
+                   )))))
 
 (set-face-attribute 'header-line nil
                     :underline t
