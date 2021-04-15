@@ -13,8 +13,9 @@
   (set-fontset-font t 'symbol (font-spec :name "Symbola") nil 'append)
   ;; (set-face-font 'default "Roboto Mono Light 24")
   ;; (set-face-font 'default "NovaMono 20")
-  (set-face-font 'default "Iosevka Term 24")
+  ;; (set-face-font 'default "Iosevka Term 24")
   ;; (set-face-attribute 'default nil :height 240 :family "NovaMono")
+  (set-face-attribute 'default nil :height 240 :family "DM Mono")
   )
 
 (setq face-font-rescale-alist
