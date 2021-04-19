@@ -19,9 +19,9 @@
   )
 
 (setq face-font-rescale-alist
-      '(("jf-openhuninn-1.1" . 1.1)
-        ("Yuanti TC" . 1.1)
-        ("Yuanti SC" . 1.1)))
+      '(("jf-openhuninn-1.1" . 1.2)
+        ("Yuanti TC" . 1.2)
+        ("Yuanti SC" . 1.2)))
         ;; ("-cdac$" . 1.3)))
 
 ;; Disable Theme BG color in terminal
