@@ -3,24 +3,15 @@
   (package-refresh-contents)
   (package-install 'use-package))
 
+(require 'use-package)
+(setq use-package-always-ensure t)
+
 (if (file-directory-p "/usr/local/bin")
     (progn
       (if (not (member "/usr/local/bin" exec-path))
           (add-to-list 'exec-path "/usr/local/bin"))
       (if (not (string-match "/usr/local/bin" (getenv "PATH")))
           (setenv "PATH" (concat "/usr/local/bin" ":" (getenv "PATH"))))))
-
-(let ((d (concat (getenv "HOME") "/.emacs.d/extra")))
-  (if (file-exists-p d)
-      (progn
-        (mapc 'load-file (directory-files d t ".el$" t)))))
-
-(let ((default-directory "/usr/local/share/emacs/site-lisp/"))
-  (if (file-readable-p default-directory)
-      (normal-top-level-add-subdirs-to-load-path)))
-
-(require 'use-package)
-(setq use-package-always-ensure t)
 
 (use-package kotlin-mode)
 (use-package elm-mode)
@@ -40,7 +31,6 @@
 (use-package vterm)
 (use-package vterm-toggle
   :bind
-  ("C-M-H-%" . 'vterm-toggle)
   ("H-'" . 'vterm-toggle)
   ("H-0" . 'vterm-toggle)
   :custom (vterm-toogle-fullscreen-p t))
@@ -107,20 +97,25 @@
 	   (elfeed-db-directory "~/.emacs.d/elfeed")))
 
 (use-package elfeed-score
-  :config (progn
-            (elfeed-score-enable)
-            (define-key elfeed-search-mode-map "=" elfeed-score-map)))
-
-(use-package emms
-  :config (progn
-            (require 'emms-setup)
-            (emms-all)
-            (emms-default-players)))
+  :config
+  (elfeed-score-enable)
+  (define-key elfeed-search-mode-map "=" elfeed-score-map))
 
 (use-package fzf)
 
+;;; Setup packages that are not loadable via use-package
+(let ((d (concat (getenv "HOME") "/.emacs.d/extra")))
+  (if (file-exists-p d)
+      (progn
+        (mapc 'load-file (directory-files d t ".el$" t)))))
+
+(let ((default-directory "/usr/local/share/emacs/site-lisp/"))
+  (if (file-readable-p default-directory)
+      (normal-top-level-add-subdirs-to-load-path)))
+
 (require 'uniquify)
 
+(setenv "XAPIAN_CJK_NGRAM" "1")
 (set-language-environment 'UTF-8)
 (prefer-coding-system 'utf-8)
 (set-file-name-coding-system 'utf-8)
