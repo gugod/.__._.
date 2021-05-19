@@ -1,5 +1,4 @@
-(use-package ns-auto-titlebar
-  :config (ns-auto-titlebar-mode))
+(use-package osx-dictionary)
 
 (setq delete-by-moving-to-trash t
       mac-option-modifier 'meta
@@ -13,7 +12,5 @@
       (server-start)
       (global-unset-key (kbd "C-z"))
       (global-unset-key (kbd "C-x C-z"))))
-
-(use-package osx-dictionary)
 
 (provide 'my-init-mac)
