@@ -174,6 +174,9 @@
 (defun my/fzf-in-project ()
   "fzf from project root."
   (interactive)
-  (fzf/start (project-root (project-current))))
+  (let ((dir (project-root (project-current))))
+    (setq default-directory dir)
+    (fzf/start dir #'fzf/action-find-file)))
+
 
 (provide 'my-fun)
