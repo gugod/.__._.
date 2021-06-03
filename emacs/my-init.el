@@ -118,7 +118,6 @@
 (setenv "XAPIAN_CJK_NGRAM" "1")
 (set-language-environment 'UTF-8)
 (prefer-coding-system 'utf-8)
-(set-file-name-coding-system 'utf-8)
 (fset 'yes-or-no-p 'y-or-n-p)
 (tool-bar-mode 0)
 (tooltip-mode  0)
