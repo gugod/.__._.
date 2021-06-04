@@ -11,13 +11,9 @@
   (set-fontset-font t 'bopomofo (font-spec :family "jf-openhuninn-1.1"))
   (set-fontset-font t 'cjk-misc (font-spec :family "jf-openhuninn-1.1"))
   (set-fontset-font t 'symbol (font-spec :name "Symbola") nil 'append)
-  ;; (set-face-font 'default "Roboto Mono Light 24")
-  ;; (set-face-font 'default "NovaMono 20")
-  ;; (set-face-font 'default "Iosevka Term 24")
-  ;; (set-face-attribute 'default nil :height 240 :family "NovaMono")
-  (set-face-attribute 'default nil :height 240 :family "DM Mono")
-  )
+  (set-face-attribute 'default nil :height 240 :family "DM Mono"))
 
+;;; These ratios works with DM Mono
 (setq face-font-rescale-alist
       '(("jf-openhuninn-1.1" . 1.2)
         ("Yuanti TC" . 1.2)
