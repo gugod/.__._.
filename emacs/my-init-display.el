@@ -45,8 +45,7 @@
                    (propertize
                     (if buffer-file-name
                         (if (buffer-modified-p) "◍" "●")
-                      "○")
-                    'face `(:inherit face-faded))
+                      "○"))
                    " %b"
                    )))))
 
