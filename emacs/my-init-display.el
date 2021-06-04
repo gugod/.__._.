@@ -30,7 +30,7 @@
 (add-hook 'after-make-frame-functions 'my/set-background-for-terminal)
 (add-hook 'window-setup-hook 'my/set-background-for-terminal)
 
-;; Remove mode-line, but keep a border line at bottom of each window.
+z;; Remove mode-line, but keep a border line at bottom of each window.
 (setq window-divider-default-bottom-width 3
       window-divider-default-places t)
 (window-divider-mode)
@@ -50,8 +50,7 @@
                    )))))
 
 (set-face-attribute 'header-line nil
-                    :underline t
-                    :inherit 'face-strong)
+                    :underline t)
 
 (define-key mode-line-major-mode-keymap [header-line]
   (lookup-key mode-line-major-mode-keymap [mode-line]))
