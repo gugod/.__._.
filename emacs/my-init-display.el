@@ -30,7 +30,7 @@
 (add-hook 'after-make-frame-functions 'my/set-background-for-terminal)
 (add-hook 'window-setup-hook 'my/set-background-for-terminal)
 
-z;; Remove mode-line, but keep a border line at bottom of each window.
+;; Remove mode-line, but keep a border line at bottom of each window.
 (setq window-divider-default-bottom-width 3
       window-divider-default-places t)
 (window-divider-mode)
