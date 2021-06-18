@@ -18,7 +18,6 @@
       '(("jf-openhuninn-1.1" . 1.2)
         ("Yuanti TC" . 1.2)
         ("Yuanti SC" . 1.2)))
-        ;; ("-cdac$" . 1.3)))
 
 ;; Disable Theme BG color in terminal
 ;; https://stackoverflow.com/questions/19054228/emacs-disable-theme-background-color-in-terminal
