@@ -16,6 +16,7 @@
         b = branch
         bc = branch --contains
         cmmm = commit -m '' --allow-empty-message
+        c = ! [[ -z "$1" ]] && git branch --show-current || git checkout $*
         current-branch = branch --show-current
         current-branch = symbolic-ref --short HEAD
         d = diff -W
