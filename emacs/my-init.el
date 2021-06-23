@@ -77,7 +77,7 @@
   :bind (("C-x g" . magit-status)))
 
 (use-package expand-region
-  :bind ("C-c C-SPC" . er/expand-region))
+  :bind ("C-=" . er/expand-region))
 
 (use-package nov
   :config
@@ -118,7 +118,6 @@
 (setenv "XAPIAN_CJK_NGRAM" "1")
 (set-language-environment 'UTF-8)
 (prefer-coding-system 'utf-8)
-(set-file-name-coding-system 'utf-8)
 (fset 'yes-or-no-p 'y-or-n-p)
 (tool-bar-mode 0)
 (tooltip-mode  0)
@@ -175,11 +174,11 @@
 (electric-pair-mode)
 
 ;; Global keybindings
-(global-set-key (kbd "C-=") 'er/expand-region)
 (global-set-key (kbd "M-z") 'zap-up-to-char)
 (global-set-key (kbd "H-{") 'previous-buffer)
 (global-set-key (kbd "H-}") 'next-buffer)
 (global-set-key (kbd "C-c f") 'my/fzf-in-project)
+(global-set-key (kbd "C-c \"") 'my/quote-current-word)
 
 (if (fboundp 'mu4e)
     (global-set-key (kbd "C-x m") 'mu4e)

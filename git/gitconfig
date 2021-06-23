@@ -16,12 +16,13 @@
         b = branch
         bc = branch --contains
         cmmm = commit -m '' --allow-empty-message
+        c = ! [[ -z "$1" ]] && git branch --show-current || git checkout $*
         current-branch = branch --show-current
         current-branch = symbolic-ref --short HEAD
         d = diff -W
         detach = ! git checkout $(git rev-parse HEAD)
         ds = diff -W --staged
-        l = ! git log --color --graph --format='%h [%aN] %s' --decorate --first-parent $(git merge-base HEAD master)^..HEAD
+        l = ! git log --graph --format='%h [%aN] %s' --decorate --first-parent $(git merge-base HEAD master)^..HEAD
         m = merge --strategy-option=patience --no-ff --no-edit
         mpr = ! f() { git merge --no-ff --no-edit origin/pr/$1 }; f;
         mylog = !git log --author $(git config user.email)
@@ -30,7 +31,11 @@
         pupu = !git pull --no-ff && git push
         pusho = ! git push -u origin $(git current-branch)
         st = status
-        wip = for-each-ref --sort='authordate:iso8601' --format=' %(color:green)%(authordate:relative)%09%(color:white)%(refname:short)' refs/heads
-        xb = ! git branch | peco
-        xc = ! git checkout $(git branch | peco)
-        xm = ! git merge --no-ff --no-edit $(git branch | peco)
+        wip = for-each-ref --sort='authordate:iso8601' --format=' %(authordate:relative)%09%(refname:short)' refs/heads
+        wipbranches = for-each-ref --sort='authordate:iso8601' --format=' %(refname:short)' refs/heads
+        xb = ! git wipbranches | fzf
+        xc = ! git checkout $(git wipbranches | fzf)
+        xm = ! git merge --no-ff --no-edit $(git wipbranches | fzf)
+        xba = ! git branch | fzf
+        xca = ! git checkout $(git branch | fzf)
+        xma = ! git merge --no-ff --no-edit $(git branch | fzf)

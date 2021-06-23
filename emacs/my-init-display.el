@@ -23,7 +23,6 @@
       '(("jf-openhuninn-1.1" . 1.2)
         ("Yuanti TC" . 1.2)
         ("Yuanti SC" . 1.2)))
-        ;; ("-cdac$" . 1.3)))
 
 ;; Disable Theme BG color in terminal
 ;; https://stackoverflow.com/questions/19054228/emacs-disable-theme-background-color-in-terminal
@@ -50,14 +49,12 @@
                    (propertize
                     (if buffer-file-name
                         (if (buffer-modified-p) "◍" "●")
-                      "○")
-                    'face `(:inherit face-faded))
+                      "○"))
                    " %b"
                    )))))
 
 (set-face-attribute 'header-line nil
-                    :underline t
-                    :inherit 'face-strong)
+                    :underline t)
 
 (define-key mode-line-major-mode-keymap [header-line]
   (lookup-key mode-line-major-mode-keymap [mode-line]))
