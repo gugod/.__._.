@@ -178,5 +178,13 @@
     (setq default-directory dir)
     (fzf/start dir #'fzf/action-find-file)))
 
+(defun my/quote-current-word ()
+  "Quote current word."
+  (interactive)
+  (let ((bounds (bounds-of-thing-at-point 'word)))
+    (goto-char (cdr bounds))
+    (insert-char #x22)
+    (goto-char (car bounds))
+    (insert-char #x22)))
 
 (provide 'my-fun)
