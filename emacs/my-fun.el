@@ -176,7 +176,7 @@
   (interactive)
   (let ((dir (project-root (project-current))))
     (setq default-directory dir)
-    (fzf/start dir #'fzf/action-find-file)))
+    (fzf/start dir)))
 
 (defun my/quote-current-word ()
   "Quote current word."
