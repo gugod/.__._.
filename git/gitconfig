@@ -37,9 +37,9 @@
         st = status
         wip = for-each-ref --sort='authordate:iso8601' --format=' %(authordate:relative)%09%(refname:short)' refs/heads
         wipb = for-each-ref --sort='authordate:iso8601' --format=' %(refname:short)' refs/heads
-        xb = ! git wipbranches | fzf
+        xb = ! git wipb | fzf
         xba = ! git branch | fzf
-        xc = ! git checkout $(git wipbranches | fzf)
+        xc = ! git checkout $(git wipb | fzf)
         xca = ! git checkout $(git branch | fzf)
-        xm = ! git merge --no-ff --no-edit $(git wipbranches | fzf)
+        xm = ! git merge --no-ff --no-edit $(git wipb | fzf)
         xma = ! git merge --no-ff --no-edit $(git branch | fzf)
