@@ -171,6 +171,13 @@
   (interactive)
   (make-thread #'gnus))
 
+(defun my/fzf-current-project ()
+  "fzf from current project root."
+  (interactive)
+  (let ((dir (project-root (project-current))))
+    (setq default-directory dir)
+    (fzf/start dir #'fzf/action-find-file)))
+
 (defun my/quote-current-word ()
   "Quote current word."
   (interactive)

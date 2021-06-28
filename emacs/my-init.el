@@ -177,7 +177,7 @@
 (global-set-key (kbd "M-z") 'zap-up-to-char)
 (global-set-key (kbd "H-{") 'previous-buffer)
 (global-set-key (kbd "H-}") 'next-buffer)
-(global-set-key (kbd "C-c f") 'fzf-git)
+(global-set-key (kbd "C-c f") 'my/fzf-current-project)
 (global-set-key (kbd "C-c \"") 'my/quote-current-word)
 
 (if (fboundp 'mu4e)
