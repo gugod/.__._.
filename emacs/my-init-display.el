@@ -11,18 +11,20 @@
   (set-fontset-font t 'bopomofo (font-spec :family "jf-openhuninn-1.1"))
   (set-fontset-font t 'cjk-misc (font-spec :family "jf-openhuninn-1.1"))
   (set-fontset-font t 'symbol (font-spec :name "Symbola") nil 'append)
-  (set-face-font 'default "Roboto Mono Light 24")
+  (set-face-font 'default "Iosevka Fixed 24")
+  ;; (set-face-font 'default "Roboto Mono Light 24")
   ;; (set-face-font 'default "DM Mono 24")
-  ;; (set-face-font 'default "NovaMono 20")
-  ;; (set-face-font 'default "Iosevka Term 24")
+  ;; (set-face-font 'default "NovaMono 24")
   ;; (set-face-attribute 'default nil :height 240 :family "DM Mono")
   )
 
+(setq default-text-properties '(line-spacing 0.25))
+
 ;; This scale ratio works with "DM Mono" and "Robot Mono Light"
-(setq face-font-rescale-alist
-      '(("jf-openhuninn-1.1" . 1.2)
-        ("Yuanti TC" . 1.2)
-        ("Yuanti SC" . 1.2)))
+;; (setq face-font-rescale-alist
+;;       '(("jf-openhuninn-1.1" . 1.2)
+;;         ("Yuanti TC" . 1.2)
+;;         ("Yuanti SC" . 1.2)))
 
 ;; Disable Theme BG color in terminal
 ;; https://stackoverflow.com/questions/19054228/emacs-disable-theme-background-color-in-terminal
