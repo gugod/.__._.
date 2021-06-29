@@ -18,7 +18,7 @@
   ;; (set-face-attribute 'default nil :height 240 :family "DM Mono")
   )
 
-(setq default-text-properties '(line-spacing 0.25))
+(setq default-text-properties '(line-spacing 0 line-height 1.0))
 
 ;; This scale ratio works with "DM Mono" and "Robot Mono Light"
 ;; (setq face-font-rescale-alist
