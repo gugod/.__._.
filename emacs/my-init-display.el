@@ -50,8 +50,8 @@
                   (list
                    (propertize
                     (if buffer-file-name
-                        (if (buffer-modified-p) "◍" "●")
-                      "○"))
+                        (if (buffer-modified-p) "*" " ")
+                      "#"))
                    " %b"
                    )))))
 
