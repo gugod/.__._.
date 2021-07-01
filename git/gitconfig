@@ -2,6 +2,9 @@
 	name = Nobo Dy
 	email = no@bo.dy
 
+[core]
+	excludesfile = ~/.gitignore
+
 [push]
 	default = current
 
@@ -19,7 +22,7 @@
         amend = commit --amend --no-edit
         b = branch
         bc = branch --contains
-        c = ! [[ -z "$1" ]] && git branch --show-current || git checkout $*
+        c = ! [[ -z "$1" ]] && git branch --show-current || git checkout
         cmmm = commit -m '' --allow-empty-message
         current-branch = branch --show-current
         current-branch = symbolic-ref --short HEAD
