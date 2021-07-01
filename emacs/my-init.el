@@ -101,7 +101,8 @@
   (elfeed-score-enable)
   (define-key elfeed-search-mode-map "=" elfeed-score-map))
 
-(use-package fzf)
+(use-package fzf
+  :bind ("C-c f" . my/fzf-current-project))
 
 ;;; Setup packages that are not loadable via use-package
 (let ((d (concat (getenv "HOME") "/.emacs.d/extra")))
@@ -177,7 +178,6 @@
 (global-set-key (kbd "M-z") 'zap-up-to-char)
 (global-set-key (kbd "H-{") 'previous-buffer)
 (global-set-key (kbd "H-}") 'next-buffer)
-(global-set-key (kbd "C-c f") 'my/fzf-current-project)
 (global-set-key (kbd "C-c \"") 'my/quote-current-word)
 
 (if (fboundp 'mu4e)
