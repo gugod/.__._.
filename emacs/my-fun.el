@@ -174,7 +174,9 @@
 (defun my/fzf-current-project ()
   "fzf from current project root."
   (interactive)
-  (let ((dir (project-root (project-current))))
+  (let ((dir (if (version< emacs-version "28.0")
+                 (cdr (project-current))
+               (project-root (project-current)))))
     (setq default-directory dir)
     (fzf)))
 
