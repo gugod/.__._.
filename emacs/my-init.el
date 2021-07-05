@@ -13,6 +13,8 @@
       (if (not (string-match "/usr/local/bin" (getenv "PATH")))
           (setenv "PATH" (concat "/usr/local/bin" ":" (getenv "PATH"))))))
 
+
+(use-package twittering-mode)
 (use-package kotlin-mode)
 (use-package elm-mode)
 
