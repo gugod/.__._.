@@ -11,7 +11,7 @@
   (setq cperl-clobber-lisp-bindings nil)
   (setq cperl-close-paren-offset -4)
   (setq cperl-continued-brace-offset 4)
-  (setq cperl-continued-statement-offset 0)
+  (setq cperl-continued-statement-offset 4)
   (setq cperl-electric-keywords nil)
   (setq cperl-electric-linefeed t)
   (setq cperl-electric-parens nil)
