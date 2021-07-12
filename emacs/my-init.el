@@ -184,9 +184,9 @@
     (global-set-key (kbd "C-x m") 'mu4e)
   (global-set-key (kbd "C-x m") 'gnus))
 
-;; These are defined on the L6 of Aterus keyboard
-(global-set-key (kbd "C-M-H-!") 'delete-other-windows)
-(global-set-key (kbd "C-M-H-@") 'other-window)
+(global-set-key (kbd "C-M-H-5") 'my/switch-to-other-buffer)
+(global-set-key (kbd "C-M-H-1") 'delete-other-windows)
+(global-set-key (kbd "C-M-H-2") 'other-window)
 
 ;; put custom-file in
 (setq custom-file "~/.emacs.d/custom.el")

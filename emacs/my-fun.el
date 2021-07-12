@@ -118,6 +118,11 @@
          "mpv"
          (list "--ytdl-format=best[height<=720]" "--force-window" url)))
 
+(defun my/switch-to-other-buffer ()
+  "Quickly switch to the other buffer"
+  (interactive)
+  (switch-to-buffer (other-buffer)))
+
 (defun my/elfeed-mark-all-as-read ()
   (interactive)
   (mark-whole-buffer)
