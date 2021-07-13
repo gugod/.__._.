@@ -27,6 +27,9 @@ vterm_cmd() {
 
 
 alias g=git
+alias k=kubectl
+alias t='twtxt tweet'
+
 alias sha256-digest='openssl dgst -sha256'
 alias json_prettify='json_pp --json_opt pretty,canonical'
 
